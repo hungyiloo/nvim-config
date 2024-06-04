@@ -29,8 +29,9 @@ vim.keymap.set(
 vim.keymap.set("n", "<f3>", "qq<esc>", { noremap = true, silent = true, desc = "Record macro" })
 vim.keymap.set("n", "<f4>", "@q", { noremap = true, silent = true, desc = "Play macro" })
 
--- Evaluate/execute the luafile
-vim.keymap.set("n", "<f5>", ":luafile %<cr>", { noremap = true, silent = true, desc = "Eval Buffer as Lua" })
+-- Evaluate/execute lua
+vim.keymap.set("n", "<leader>r", ":luafile %<cr>", { noremap = true, silent = true, desc = "Eval Buffer as Lua" })
+vim.keymap.set("v", "<leader>r", ":lua<cr>", { noremap = true, silent = true, desc = "Eval Selection as Lua" })
 
 -- Trigger autocompletion
 vim.keymap.set("i", "<C-.>", require("cmp").complete, { noremap = true, silent = true, desc = "Autocomplete" })
