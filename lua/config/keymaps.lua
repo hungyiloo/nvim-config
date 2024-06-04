@@ -1,6 +1,7 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+local wk = require("which-key")
 
 -- Add a familiar "save file" shortcut
 vim.keymap.set("n", "<leader>fs", ":w<CR>", { noremap = true, silent = true, desc = "Save File" })
@@ -36,3 +37,11 @@ vim.keymap.set("v", "<leader>r", ":lua<cr>", { noremap = true, silent = true, de
 -- Trigger autocompletion
 -- stylua: ignore
 vim.keymap.set("i", "<C-.>", function() require("cmp").complete() end, { noremap = true, silent = true, desc = "Autocomplete" })
+
+-- Project keymaps
+wk.register({
+  ["<leader>"] = { p = { name = "projects" } },
+})
+vim.keymap.set("n", "<leader>pp", ":Telescope projects<cr>", { noremap = true, silent = true, desc = "Open Project" })
+vim.keymap.set("n", "<leader>pa", ":AddProject<cr>", { noremap = true, silent = true, desc = "Add Project" })
+vim.keymap.set("n", "<leader>ps", ":wa<cr>", { noremap = true, silent = true, desc = "Save All Files" })
