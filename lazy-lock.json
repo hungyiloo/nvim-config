@@ -1,4 +1,5 @@
 {
+  "BetterGX.nvim": { "branch": "main", "commit": "c0d5b4c2468c4dfde314aa463e7a82e86c3ab614" },
   "LazyVim": { "branch": "main", "commit": "b289fea1636eda08d82344dc32a114bca550e375" },
   "LuaSnip": { "branch": "master", "commit": "878ace11983444d865a72e1759dbcc331d1ace4c" },
   "SchemaStore.nvim": { "branch": "main", "commit": "931f9f3b7b60ec976159cb01b4a40da3829ac2fd" },
@@ -49,6 +50,7 @@
   "persistence.nvim": { "branch": "main", "commit": "5fe077056c821aab41f87650bd6e1c48cd7dd047" },
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
   "project.nvim": { "branch": "main", "commit": "8c6bad7d22eef1b71144b401c9f74ed01526a4fb" },
+  "substitute.nvim": { "branch": "main", "commit": "8b93e792747520b6490237b5b32963e256fbde24" },
   "tailwindcss-colorizer-cmp.nvim": { "branch": "main", "commit": "3d3cd95e4a4135c250faf83dd5ed61b8e5502b86" },
   "telescope-file-browser.nvim": { "branch": "master", "commit": "1280db1f835bd6b73a485d6f1149e02df67533c4" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "9ef21b2e6bb6ebeaf349a0781745549bbb870d27" },

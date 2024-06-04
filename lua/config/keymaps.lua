@@ -34,4 +34,5 @@ vim.keymap.set("n", "<leader>r", ":luafile %<cr>", { noremap = true, silent = tr
 vim.keymap.set("v", "<leader>r", ":lua<cr>", { noremap = true, silent = true, desc = "Eval Selection as Lua" })
 
 -- Trigger autocompletion
-vim.keymap.set("i", "<C-.>", require("cmp").complete, { noremap = true, silent = true, desc = "Autocomplete" })
+-- stylua: ignore
+vim.keymap.set("i", "<C-.>", function() require("cmp").complete() end, { noremap = true, silent = true, desc = "Autocomplete" })
