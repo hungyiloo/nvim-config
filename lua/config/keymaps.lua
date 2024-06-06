@@ -85,3 +85,7 @@ vim.keymap.set("n", "<leader>wM", function()
   LazyVim.toggle.maximize()
 end, { desc = "Maximize Toggle" })
 vim.keymap.set("n", "<leader>wm", "<cmd>only<cr>", { desc = "Only Current Window" })
+
+-- Convenience mapping for changing multiple instances of a symbol
+vim.keymap.set("n", "c*", "m`*``cgn", { noremap = true, desc = "Change Symbol Matches" })
+vim.keymap.set("v", "C", '"cy/<c-r>c<cr>Ncgn', { noremap = true, desc = "Change Symbol Matches" })
