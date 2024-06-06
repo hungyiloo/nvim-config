@@ -15,3 +15,7 @@ vim.g.neovide_floating_shadow = false
 -- even taking into account font weight changes
 vim.g.neovide_text_gamma = 0.9
 vim.g.neovide_text_contrast = 0.1
+
+-- show a more useful window title
+vim.o.title = true
+vim.o.titlestring = '%{expand("%:t")} - %{expand("%:~:h")} - Neovide'
