@@ -5,6 +5,7 @@ return {
       "<leader>.",
       ":Telescope file_browser path=%:p:h=%:p:h<cr>",
       desc = "Browse Files",
+      silent = true,
     },
   },
   config = function()

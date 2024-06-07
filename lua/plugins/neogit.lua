@@ -10,32 +10,29 @@ return {
       {
         "<leader>gg",
         function()
-          require("neogit").open()
-        end,
-        desc = "Neogit (cwd)",
-      },
-      {
-        "<leader>gG",
-        function()
           require("neogit").open({ cwd = LazyVim.root.git() })
         end,
         desc = "Neogit (Root Dir)",
       },
-    },
-    config = true,
-  },
-  {
-    "williamboman/mason.nvim",
-    init = function()
-      -- delete lazygit keymap for file history
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "LazyVimKeymaps",
-        once = true,
-        callback = function()
-          pcall(vim.keymap.del, "n", "<leader>gf")
-          pcall(vim.keymap.del, "n", "<leader>gl")
+      {
+        "<leader>gG",
+        function()
+          LazyVim.lazygit({ cwd = LazyVim.root.git() })
         end,
-      })
-    end,
+        desc = "Lazygit (Root Dir)",
+      },
+    },
+    config = {
+      -- Hides the hints at the top of the status buffer
+      disable_hint = true,
+
+      graph_style = "unicode",
+      signs = {
+        -- { CLOSED, OPENED }
+        hunk = { "", "" },
+        item = { "", "" },
+        section = { "", "" },
+      },
+    },
   },
 }
