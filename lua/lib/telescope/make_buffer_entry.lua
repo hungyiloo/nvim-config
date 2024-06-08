@@ -14,12 +14,14 @@ function M.gen_from_buffer_like_leaderf(opts)
     return 1 == vim.fn.buflisted(b)
   end, vim.api.nvim_list_bufs())
 
-  local max_bufnr = math.max(unpack(bufnrs))
+  local max_bufnr = #bufnrs > 0 and math.max(unpack(bufnrs)) or 0
   local bufnr_width = #tostring(max_bufnr)
 
-  local max_bufname = math.max(unpack(map(function(bufnr)
-    return vim.fn.strdisplaywidth(vim.fn.fnamemodify(vim.api.nvim_buf_get_name(bufnr), ":p:t"))
-  end, bufnrs)))
+  local max_bufname = #bufnrs > 0
+      and math.max(unpack(map(function(bufnr)
+        return vim.fn.strdisplaywidth(vim.fn.fnamemodify(vim.api.nvim_buf_get_name(bufnr), ":p:t"))
+      end, bufnrs)))
+    or ""
 
   local displayer = entry_display.create({
     separator = " ",
