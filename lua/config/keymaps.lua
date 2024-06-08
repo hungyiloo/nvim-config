@@ -13,6 +13,11 @@ vim.keymap.set("n", "<leader>;", ":", { noremap = true, silent = false, desc = "
 -- and remap 'zx' to delete the buffer
 vim.keymap.set("n", "zF", "zx", { noremap = true, silent = true, desc = "Update folds" })
 vim.keymap.set("n", "zx", LazyVim.ui.bufremove, { noremap = true, silent = true, desc = "Delete Buffer" })
+vim.keymap.set("n", "<leader>bx", function()
+  vim.cmd("bd")
+  vim.cmd("Dashboard")
+  vim.cmd("only")
+end, { noremap = true, silent = true, desc = "Close all buffers" })
 
 -- Tools for adding blank lines above/below cursor without changing position
 vim.keymap.set("n", "]<space>", "m`o<esc>``", { noremap = true, silent = true, desc = "Insert blank line below" })
