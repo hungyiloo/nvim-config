@@ -34,10 +34,6 @@ vim.keymap.set("n", "<f4>", "@q", { noremap = true, silent = true, desc = "Play 
 vim.keymap.set("n", "<leader>r", ":luafile %<cr>", { noremap = true, silent = true, desc = "Eval Buffer as Lua" })
 vim.keymap.set("v", "<leader>r", ":lua<cr>", { noremap = true, silent = true, desc = "Eval Selection as Lua" })
 
--- Trigger autocompletion
--- stylua: ignore
-vim.keymap.set("i", "<C-.>", function() require("cmp").complete() end, { noremap = true, silent = true, desc = "Autocomplete" })
-
 -- Project keymaps
 wk.register({
   ["<leader>"] = { p = { name = "projects" } },
@@ -50,12 +46,7 @@ vim.keymap.set(
   ":CdProjectManualAdd<cr>",
   { noremap = true, silent = true, desc = "Add Project Manually" }
 )
-vim.keymap.set(
-  "n",
-  "<leader>ps",
-  ":windo wa<cr>",
-  { noremap = true, silent = true, desc = "Save All Files (This Tab)" }
-)
+vim.keymap.set("n", "<leader>ps", ":wa<cr>", { noremap = true, silent = true, desc = "Save All Files" })
 
 -- Delete words with ctrl+backspace
 vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true, desc = "Delete Last Word" })
@@ -85,6 +76,15 @@ vim.keymap.set("n", "<leader>wM", function()
 end, { desc = "Maximize Toggle" })
 vim.keymap.set("n", "<leader>wm", "<cmd>only<cr>", { desc = "Only Current Window" })
 
+-- "Other window" should cycle through all the windows, like emacs
+-- instead of whatever behavior <C-w>p provides, which feels inconsistent to me
+vim.keymap.set("n", "<leader>ww", "<C-w>w", { desc = "Other Window" })
+
 -- Convenience mapping for changing multiple instances of a symbol
-vim.keymap.set("n", "c*", "m`*``cgn", { noremap = true, desc = "Change Symbol Matches" })
-vim.keymap.set("v", "C", '"cy/<c-r>c<cr>Ncgn', { noremap = true, desc = "Change Symbol Matches" })
+vim.keymap.set("n", "c*", "m`*``cgn", { noremap = true, desc = "Change Symbol Matches", silent = true })
+vim.keymap.set("v", "C", '"cy/<c-r>c<cr>Ncgn', { noremap = true, desc = "Change Symbol Matches", silent = true })
+
+-- Add a new +insert keymap group
+wk.register({
+  ["<leader>"] = { i = { name = "insert" } },
+})
