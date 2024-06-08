@@ -18,4 +18,4 @@ vim.g.neovide_text_contrast = 0.1
 
 -- show a more useful window title
 vim.o.title = true
-vim.o.titlestring = '%{expand("%:t")} - %{expand("%:~:h")} - Neovide'
+vim.o.titlestring = '%{empty(expand("%:t")) ? "Neovide" : expand("%:t") . " - " . expand("%:~:h") . " - Neovide"}'
