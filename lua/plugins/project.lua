@@ -15,7 +15,8 @@ return {
         callback = function(dir)
           vim.notify("CWD: " .. dir)
           -- require("neogit").open({ cwd = dir })
-          vim.cmd("Neotree " .. dir)
+          -- vim.cmd("Neotree " .. dir)
+          vim.cmd("Oil " .. dir)
         end,
       },
     },

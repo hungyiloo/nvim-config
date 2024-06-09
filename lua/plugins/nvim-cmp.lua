@@ -36,8 +36,9 @@ return {
     -- Customized keymaps and options to prevent accidental autocompletes when typing normally
     -- opts.preselect = cmp.PreselectMode.None
     -- opts.completion = { completeopt = "menu,menuone,noinsert,noselect" }
+    -- in the below mappings, set select = false to prevent auto selection of the first item
     opts.mapping = cmp.mapping.preset.insert({
-      ["<tab>"] = cmp.mapping.confirm({ select = true }),
+      -- ["<tab>"] = cmp.mapping.confirm({ select = true }),
       ["<C-j>"] = cmp.mapping.select_next_item({ select = true, behavior = cmp.SelectBehavior.Select }),
       ["<C-n>"] = cmp.mapping.select_next_item({ select = true, behavior = cmp.SelectBehavior.Select }),
       ["<C-k>"] = cmp.mapping.select_prev_item({ select = true, behavior = cmp.SelectBehavior.Select }),
@@ -59,6 +60,8 @@ return {
       end,
     })
 
+    -- Don't include snippets in autocomplete by default.
+    -- This is preconfigured by LazyVim, so we have to remove it from the opts
     for i = #opts.sources, 1, -1 do
       if opts.sources[i].name == "snippets" then
         table.remove(opts.sources, i)

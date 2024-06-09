@@ -13,11 +13,16 @@ vim.keymap.set("n", "<leader>;", ":", { noremap = true, silent = false, desc = "
 -- and remap 'zx' to delete the buffer
 vim.keymap.set("n", "zF", "zx", { noremap = true, silent = true, desc = "Update folds" })
 vim.keymap.set("n", "zx", LazyVim.ui.bufremove, { noremap = true, silent = true, desc = "Delete Buffer" })
+
+-- A shortcut to close all buffers and "reset" the visual layout
 vim.keymap.set("n", "<leader>bx", function()
   vim.cmd("bd")
   vim.cmd("Dashboard")
   vim.cmd("only")
 end, { noremap = true, silent = true, desc = "Close all buffers" })
+
+-- Browse the current directory using Oil
+vim.keymap.set("n", "<leader>f.", "<cmd>Oil<cr>", { noremap = true, silent = true, desc = "Browse current directory" })
 
 -- Tools for adding blank lines above/below cursor without changing position
 vim.keymap.set("n", "]<space>", "m`o<esc>``", { noremap = true, silent = true, desc = "Insert blank line below" })
