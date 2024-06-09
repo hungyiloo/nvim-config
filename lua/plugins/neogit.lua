@@ -1,3 +1,6 @@
+-- NOTE: This is commented out because lazygit currently seems more usable in
+--       my personal circumstances. This may change, since I liked magit in the
+--       past, and neogit is closer to that.
 return {
   -- {
   --   "NeogitOrg/neogit",
