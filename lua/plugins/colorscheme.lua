@@ -6,6 +6,11 @@ return {
     lazy = false,
   },
   {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    opts = { style = "moon" },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin",
