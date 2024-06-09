@@ -39,6 +39,7 @@ vim.keymap.set(
 -- Emacs-style basic macros
 vim.keymap.set("n", "<f3>", "qq<esc>", { noremap = true, silent = true, desc = "Record macro" })
 vim.keymap.set("n", "<f4>", "@q", { noremap = true, silent = true, desc = "Play macro" })
+vim.keymap.set("v", "<f4>", "<cmd>normal Q<cr>", { noremap = true, silent = true, desc = "Play macro on lines" })
 
 -- Evaluate/execute lua
 vim.keymap.set("n", "<leader>r", ":luafile %<cr>", { noremap = true, silent = true, desc = "Eval Buffer as Lua" })
