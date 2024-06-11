@@ -1,5 +1,27 @@
 return {
   "LintaoAmons/cd-project.nvim",
+  lazy = true,
+  cmd = { "CdProject", "CdProjectTab", "CdProjectAdd", "CdProjectManualAdd", "CdProjectBack", "CdProjectSearchAndAdd" },
+  keys = {
+    {
+      mode = { "n" },
+      "<leader>pp",
+      ":CdProjectTab<cr>",
+      noremap = true,
+      silent = true,
+      desc = "Open Project (New Tab)",
+    },
+    { mode = { "n" }, "<leader>pP", ":CdProject<cr>", noremap = true, silent = true, desc = "Open Project (This Tab)" },
+    { mode = { "n" }, "<leader>pa", ":CdProjectAdd<cr>", noremap = true, silent = true, desc = "Add Project" },
+    {
+      mode = { "n" },
+      "<leader>pA",
+      ":CdProjectManualAdd<cr>",
+      noremap = true,
+      silent = true,
+      desc = "Add Project Manually",
+    },
+  },
   opts = {
     -- this json file is acting like a database to update and read the projects in real time.
     -- So because it's just a json file, you can edit directly to add more paths you want manually
@@ -13,10 +35,13 @@ return {
     hooks = {
       {
         callback = function(dir)
-          vim.notify("CWD: " .. dir)
+          vim.notify("   " .. dir)
           -- require("neogit").open({ cwd = dir })
           -- vim.cmd("Neotree " .. dir)
-          vim.cmd("Oil " .. dir)
+          -- vim.cmd("Oil " .. dir)
+          vim.defer_fn(function()
+            vim.cmd([[Dashboard]])
+          end, 100)
         end,
       },
     },

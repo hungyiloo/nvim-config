@@ -5,11 +5,11 @@ return {
     keys = {
       { "<leader>p", false },
       {
-        "<leader>y",
+        "<leader>iy",
         function()
           require("telescope").extensions.yank_history.yank_history({})
         end,
-        desc = "Open Yank History",
+        desc = "Insert Yank History",
       },
     },
   },

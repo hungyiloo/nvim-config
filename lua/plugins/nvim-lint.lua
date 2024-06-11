@@ -8,6 +8,9 @@ return {
           "MD013", -- long lines
           "MD041", -- first line must be a heading
           "MD025", -- multiple top level headings
+          "MD018", -- missing space between hash and headings (actually tags)
+          "MD012", -- multiple blank lines
+          "MD034", -- no bare URLs
           "--",
         },
       },

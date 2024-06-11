@@ -49,14 +49,6 @@ vim.keymap.set("v", "<leader>r", ":lua<cr>", { noremap = true, silent = true, de
 wk.register({
   ["<leader>"] = { p = { name = "projects" } },
 })
-vim.keymap.set("n", "<leader>pp", ":CdProject<cr>", { noremap = true, silent = true, desc = "Open Project" })
-vim.keymap.set("n", "<leader>pa", ":CdProjectAdd<cr>", { noremap = true, silent = true, desc = "Add Project" })
-vim.keymap.set(
-  "n",
-  "<leader>pA",
-  ":CdProjectManualAdd<cr>",
-  { noremap = true, silent = true, desc = "Add Project Manually" }
-)
 vim.keymap.set("n", "<leader>ps", ":wa<cr>", { noremap = true, silent = true, desc = "Save All Files" })
 
 -- Delete words with ctrl+backspace
@@ -93,7 +85,10 @@ vim.keymap.set("n", "<leader>ww", "<C-w>w", { desc = "Other Window" })
 
 -- Convenience mapping for changing multiple instances of a symbol
 vim.keymap.set("n", "c*", "m`*``cgn", { noremap = true, desc = "Change Symbol Matches", silent = true })
-vim.keymap.set("v", "C", '"cy/<c-r>c<cr>Ncgn', { noremap = true, desc = "Change Symbol Matches", silent = true })
+vim.keymap.set("v", "C", function()
+  vim.cmd("normal *N")
+  vim.api.nvim_feedkeys("cgn", "n", true)
+end, { noremap = true, desc = "Change Symbol Matches", silent = true })
 
 -- Add a new +insert keymap group
 wk.register({
