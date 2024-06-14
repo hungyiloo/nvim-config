@@ -29,14 +29,15 @@ return {
     --       this error, but the dashboard config is rapidly changing upstream so
     --       it may be worth trying to revert this change to the above commented block
     --       on the next major version of LazyVim.
+    --
     opts.config.center = {
-      -- used to be LazyVim.telescope("files")
+      -- used to be LazyVim.pick()
       { action = "Telescope find_files",                           desc = " Find File",       icon = " ", key = "f" },
       { action = "ene | startinsert",                              desc = " New File",        icon = " ", key = "n" },
       { action = "CdProject",                                      desc = " Projects",        icon = " ", key = "p" },
-      { action = "Telescope oldfiles",                             desc = " Recent Files",    icon = " ", key = "r" },
-      { action = "Telescope live_grep",                            desc = " Find Text",       icon = " ", key = "g" },
-      { action = [[lua LazyVim.telescope.config_files()()]],       desc = " Config",          icon = " ", key = "c" },
+      { action = LazyVim.pick("oldfiles"),                         desc = " Recent Files",    icon = " ", key = "r" },
+      { action = LazyVim.pick("live_grep"),                        desc = " Find Text",       icon = " ", key = "g" },
+      { action = LazyVim.pick.config_files(),                      desc = " Config",          icon = " ", key = "c" },
       { action = 'lua require("persistence").load()',              desc = " Restore Session", icon = " ", key = "s" },
       { action = "LazyExtras",                                     desc = " Lazy Extras",     icon = " ", key = "x" },
       { action = "Lazy",                                           desc = " Lazy",            icon = "󰒲 ", key = "l" },
