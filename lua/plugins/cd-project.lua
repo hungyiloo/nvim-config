@@ -21,6 +21,14 @@ return {
       silent = true,
       desc = "Add Project Manually",
     },
+    {
+      mode = { "n" },
+      "<leader>pd",
+      ":CdProjectDelete<cr>",
+      noremap = true,
+      silent = true,
+      desc = "Delete Project",
+    },
   },
   opts = {
     -- this json file is acting like a database to update and read the projects in real time.
@@ -36,11 +44,10 @@ return {
       {
         callback = function(dir)
           vim.notify("   " .. dir)
-          -- require("neogit").open({ cwd = dir })
-          -- vim.cmd("Neotree " .. dir)
-          -- vim.cmd("Oil " .. dir)
           vim.defer_fn(function()
-            vim.cmd([[Dashboard]])
+            if vim.fn.expand("%") == "" then
+              vim.cmd([[Dashboard]])
+            end
           end, 100)
         end,
       },
