@@ -16,7 +16,7 @@ vim.keymap.set("n", "zx", LazyVim.ui.bufremove, { noremap = true, silent = true,
 
 -- A shortcut to close all buffers and "reset" the visual layout
 vim.keymap.set("n", "<leader>bx", function()
-  vim.cmd("bd")
+  vim.cmd("%bd")
   vim.cmd("Dashboard")
   vim.cmd("only")
 end, { noremap = true, silent = true, desc = "Close all buffers" })
