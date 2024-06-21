@@ -20,3 +20,7 @@ vim.g.neovide_text_contrast = 0.1
 -- show a more useful window title
 vim.o.title = true
 vim.o.titlestring = '%{empty(expand("%:t")) ? "Neovide" : expand("%:t") . " - " . expand("%:~:h") . " - Neovide"}'
+
+-- disable autoformatting on save on startup 
+-- (but this can be enabled by <leader>uf)
+vim.g.autoformat = false
