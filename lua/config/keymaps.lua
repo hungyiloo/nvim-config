@@ -42,7 +42,7 @@ vim.keymap.set("n", "<f4>", "@q", { noremap = true, silent = true, desc = "Play 
 vim.keymap.set("v", "<f4>", "<cmd>normal Q<cr>", { noremap = true, silent = true, desc = "Play macro on lines" })
 
 -- Evaluate/execute lua
-vim.keymap.set("n", "<leader>r", ":luafile %<cr>", { noremap = true, silent = true, desc = "Eval Buffer as Lua" })
+vim.keymap.set("n", "<leader>r", ":%lua<cr>", { noremap = true, silent = true, desc = "Eval Buffer as Lua" })
 vim.keymap.set("v", "<leader>r", ":lua<cr>", { noremap = true, silent = true, desc = "Eval Selection as Lua" })
 
 -- Project keymaps
