@@ -18,7 +18,7 @@ vim.keymap.set("n", "zx", LazyVim.ui.bufremove, { noremap = true, silent = true,
 vim.keymap.set("n", "<leader>bx", function()
   vim.cmd("%bd")
   vim.cmd("Dashboard")
-  vim.cmd("only")
+  vim.cmd("silent only")
 end, { noremap = true, silent = true, desc = "Close all buffers" })
 
 -- Browse the current directory using Oil
