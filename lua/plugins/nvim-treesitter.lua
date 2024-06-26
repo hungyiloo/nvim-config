@@ -6,7 +6,11 @@ return {
     end
     require("nvim-treesitter.configs").setup(opts)
 
-    -- add numbat support
+    -- NOTE: This adds numbat support.
+    --       Trying to figure out why this isn't working?
+    --       1. Run :TSInstall numbat
+    --       2. Download the highlights.scm file from the repo linked below
+    --          into /nvim-data/lazy/nvim-treesitter/queries/
     local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
     ---@diagnostic disable-next-line: inject-field
     parser_config.numbat = {
