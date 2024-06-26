@@ -24,8 +24,25 @@ return {
         keys = {
           {
             "gd",
+            -- NOTE: This keymap function actually overrides *all* goto
+            --       definition operations, not just in the csharp project.
+            --       Special handling is needed to fall back to normal lsp
+            --       definitions when not in a csharp_ls buffer.
             function()
-              require("csharpls_extended").lsp_definitions()
+              local bufferAttachedClients = vim.lsp.get_clients({ bufnr = 0 })
+              local hasCSharpLS = false
+              for _, client in pairs(bufferAttachedClients) do
+                if client.name == "csharp_ls" then
+                  hasCSharpLS = true
+                  break
+                end
+              end
+              -- only use the special csharp_ls goto-definitions if we are in its context
+              if hasCSharpLS then
+                require("csharpls_extended").lsp_definitions()
+              else
+                vim.lsp.buf.definition()
+              end
             end,
             desc = "Goto Definition",
           },
