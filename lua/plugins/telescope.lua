@@ -23,6 +23,38 @@ return {
         end,
         desc = "Switch Buffer",
       },
+      {
+        "<leader>/",
+        function()
+          require("telescope").extensions.live_grep_args.live_grep_args({ search_dirs = { LazyVim.root.git() } })
+        end,
+        desc = "Live Grep (Root Dir)",
+      },
+      {
+        "<leader>sg",
+        function()
+          require("telescope").extensions.live_grep_args.live_grep_args({ search_dirs = { LazyVim.root.git() } })
+        end,
+        desc = "Live Grep (Root Dir)",
+      },
+      {
+        "<leader>sG",
+        function()
+          require("telescope").extensions.live_grep_args.live_grep_args({ search_dirs = { LazyVim.root.cwd() } })
+        end,
+        desc = "Live Grep (cwd)",
+      },
+    },
+    dependencies = {
+      {
+        "nvim-telescope/telescope-live-grep-args.nvim",
+        event = "VeryLazy",
+        config = function(_, _)
+          require("lazyvim.util").on_load("telescope.nvim", function()
+            require("telescope").load_extension("live_grep_args")
+          end)
+        end,
+      },
     },
   },
   {
