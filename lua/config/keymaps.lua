@@ -40,7 +40,16 @@ vim.keymap.set(
 vim.keymap.set("n", "<f3>", "qq<esc>", { noremap = true, silent = true, desc = "Record macro" })
 vim.keymap.set("n", "<f4>", "@q", { noremap = true, silent = true, desc = "Play macro" })
 vim.keymap.set("v", "<f4>", "<cmd>normal Q<cr>", { noremap = true, silent = true, desc = "Play macro on lines" })
-vim.keymap.set("n", "<f2>", ":let @q=@*<cr>", { noremap = true, silent = true, desc = "Load macro from clipboard" })
+vim.keymap.set("n", "<f1>", function()
+  local macro = vim.api.nvim_replace_termcodes(vim.fn.getreg("+"), true, true, true)
+  vim.fn.setreg("q", macro)
+  vim.notify(macro, vim.log.levels.INFO, { title = 'Loaded clipboard macro into @q' })
+end, { noremap = true, silent = true, desc = "Load macro from clipboard" })
+vim.keymap.set("n", "<f2>", function()
+  local macro_escaped = vim.fn.keytrans(vim.fn.getreg("q"))
+  vim.fn.setreg("+", macro_escaped)
+  vim.notify(macro_escaped, nil, { title = 'Saved into clipboard'})
+end, { noremap = true, silent = true, desc = "Save macro to clipboard" })
 
 -- Evaluate/execute lua
 vim.keymap.set("n", "<leader>r", ":%lua<cr>", { noremap = true, silent = true, desc = "Eval Buffer as Lua" })
