@@ -2,7 +2,10 @@ return {
   "mfussenegger/nvim-lint",
   opts = {
     linters = {
-      markdownlint = {
+      -- BUG: Rule disabling is broken ever since the upgrade to
+      --      markdownlint-cli2 in LazyVim. Thes following lines have no
+      --      effect, and I don't yet know how to fix them.
+      ["markdownlint-cli2"] = {
         args = {
           "--disable", -- disable the following warnings:
           "MD013", -- long lines
