@@ -24,3 +24,6 @@ vim.o.titlestring = '%{empty(expand("%:t")) ? "Neovide" : expand("%:t") . " - " 
 -- disable autoformatting on save on startup 
 -- (but this can be enabled by <leader>uf)
 vim.g.autoformat = false
+
+-- always use pwsh as the shell
+vim.opt.shell = 'pwsh'
