@@ -13,41 +13,15 @@ return {
     opts.config.header = vim.split(logo, "\n")
 
     -- -- Add a custom "projects" menu item
-    -- local projects = {
-    --   action = "CdProject",
-    --   desc = " Projects",
-    --   icon = " ",
-    --   key = "p",
-    -- }
-    -- projects.desc = projects.desc .. string.rep(" ", 43 - #projects.desc)
-    -- projects.key_format = "  %s"
-    -- table.insert(opts.config.center, 3, projects)
-
-    -- stylua: ignore
-    -- HACK: Redefine the dashboard with some custom actions to prevent errors on
-    --       finding recent files (r). I don't know what causes this error, but
-    --       the dashboard config is rapidly changing upstream so it may be
-    --       worth trying to revert this change to the above commented block on
-    --       the next major version of LazyVim.
-    --
-    opts.config.center = {
-      { action = 'lua LazyVim.pick()()',                           desc = " Find File",       icon = " ", key = "f" },
-      { action = "ene | startinsert",                              desc = " New File",        icon = " ", key = "n" },
-      { action = "CdProject",                                      desc = " Projects",        icon = " ", key = "p" },
-      -- used to be 'LazyVim.pick("oldfiles")()'
-      { action = ':Telescope oldfiles',                            desc = " Recent Files",    icon = " ", key = "r" },
-      { action = 'lua LazyVim.pick("live_grep")()',                desc = " Find Text",       icon = " ", key = "g" },
-      { action = 'lua LazyVim.pick.config_files()()',              desc = " Config",          icon = " ", key = "c" },
-      { action = 'lua require("persistence").load()',              desc = " Restore Session", icon = " ", key = "s" },
-      { action = "LazyExtras",                                     desc = " Lazy Extras",     icon = " ", key = "x" },
-      { action = "Lazy",                                           desc = " Lazy",            icon = "󰒲 ", key = "l" },
-      { action = function() vim.api.nvim_input("<cmd>qa<cr>") end, desc = " Quit",            icon = " ", key = "q" },
+    local projects = {
+      action = "CdProject",
+      desc = " Projects",
+      icon = " ",
+      key = "p",
     }
-    for _, button in ipairs(opts.config.center) do
-      button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
-      button.key_format = "  %s"
-    end
-    -- end HACK
+    projects.desc = projects.desc .. string.rep(" ", 43 - #projects.desc)
+    projects.key_format = "  %s"
+    table.insert(opts.config.center, 3, projects)
 
     opts.hide = {
       statusline = false,
