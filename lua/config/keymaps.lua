@@ -104,3 +104,23 @@ end, { noremap = true, desc = "Change Symbol Matches", silent = true })
 wk.register({
   ["<leader>"] = { i = { name = "insert" } },
 })
+
+-- Runtime zoomimg in Neovide with neovide_scale_factor
+vim.keymap.set("n", "<C-=>", function ()
+  if not vim.g.neovide_scale_factor then
+    vim.g.neovide_scale_factor = 1
+  end
+  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.05
+  vim.cmd([[redraw!]])
+end, { desc = "Zoom In" })
+vim.keymap.set("n", "<C-->", function ()
+  if not vim.g.neovide_scale_factor then
+    vim.g.neovide_scale_factor = 1
+  end
+  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.05
+  vim.cmd([[redraw!]])
+end, { desc = "Zoom Out" })
+vim.keymap.set("n", "<C-0>", function ()
+  vim.g.neovide_scale_factor = 1
+  vim.cmd([[redraw!]])
+end, { desc = "Reset Zoom" })
