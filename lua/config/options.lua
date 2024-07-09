@@ -27,3 +27,6 @@ vim.g.autoformat = false
 
 -- always use pwsh as the shell
 vim.opt.shell = 'pwsh'
+-- using pwsh needs a shell command flag set
+-- https://github.com/neovim/neovim/issues/13893
+vim.opt.shellcmdflag = '-c'
