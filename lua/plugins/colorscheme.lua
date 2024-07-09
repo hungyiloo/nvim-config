@@ -1,11 +1,10 @@
 return {
-  -- { "shaunsingh/nord.nvim" },
   {
     "catppuccin/nvim",
     name = "catppuccin",
     lazy = false,
-    opts = {
-      custom_highlights = function(colors)
+    opts = function(_, opts)
+      opts.custom_highlights = function(colors)
         return {
           -- HACK: Recent updates seem to make visual selections and LSP
           --       reference highlights indistinguishable, so this override
@@ -15,8 +14,11 @@ return {
           LspReferenceRead = { bg = colors.surface0 },
           LspReferenceWrite = { bg = colors.surface0 },
         }
-      end,
-    },
+      end
+      if not vim.g.neovide then
+        opts.transparent_background = true
+      end
+    end,
   },
   -- {
   --   "folke/tokyonight.nvim",
