@@ -29,5 +29,17 @@ return {
       },
     })
     vim.treesitter.language.register("numbat", "numbat")
+
+
+    -- Ensure angular HTML files are set to an angular-specific filetype
+    -- Note that this depends on the angular LazyVim extra being enabled.
+    -- TODO: Refactor this autocmd and the angular extra setup into one file
+    --       for clarity
+    vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
+      pattern = { "*.component.html", "*.container.html" },
+      callback = function()
+        vim.bo.filetype = "angular"
+      end,
+    })
   end,
 }
