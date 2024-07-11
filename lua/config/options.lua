@@ -11,11 +11,15 @@ vim.opt.linespace = 2
 -- shadows for floating windows sometimes make overlays look janky
 vim.g.neovide_floating_shadow = false
 
--- these settings apparently emulate alacritty's font rendering better;
--- it does seem to make the text thinner and clearer for me,
--- even taking into account font weight changes
-vim.g.neovide_text_gamma = 0.9
+-- adjust font rendering, especially important for low DPI displays
+vim.g.neovide_text_gamma = 0.7
 vim.g.neovide_text_contrast = 0.1
+-- NOTE: try these for high DPI displays
+-- vim.g.neovide_text_gamma = 0.7
+-- vim.g.neovide_text_contrast = 0.1
+-- and these for low DPI displays
+-- vim.g.neovide_text_gamma = 1.1
+-- vim.g.neovide_text_contrast = 0.5
 
 -- show a more useful window title
 vim.o.title = true
