@@ -13,3 +13,9 @@ if vim.fn.filereadable(spell_add_path) == 1 then
     vim.notify('󰓆 Spell file recompiled: ' .. spell_spl_path)
   end
 end
+
+-- convenience function for forcibly re-requiring a module
+function _G.rerequire(module_name)
+  package.loaded[module_name] = nil
+  require(module_name)
+end
