@@ -56,8 +56,8 @@ vim.keymap.set("n", "<leader>r", ":%lua<cr>", { noremap = true, silent = true, d
 vim.keymap.set("v", "<leader>r", ":lua<cr>", { noremap = true, silent = true, desc = "Eval Selection as Lua" })
 
 -- Project keymaps
-wk.register({
-  ["<leader>"] = { p = { name = "projects" } },
+wk.add({
+  { "<leader>p", name = "projects" },
 })
 vim.keymap.set("n", "<leader>ps", ":wa<cr>", { noremap = true, silent = true, desc = "Save All Files" })
 
@@ -94,15 +94,14 @@ vim.keymap.set("n", "<leader>wm", "<cmd>only<cr>", { desc = "Only Current Window
 vim.keymap.set("n", "<leader>ww", "<C-w>w", { desc = "Other Window" })
 
 -- Convenience mapping for changing multiple instances of a symbol
-vim.keymap.set("n", "c*", "m`*``cgn", { noremap = true, desc = "Change Symbol Matches", silent = true })
-vim.keymap.set("v", "C", function()
+vim.keymap.set({ "n", "v" }, "g*", function()
   vim.cmd("normal *N")
   vim.api.nvim_feedkeys("cgn", "n", true)
 end, { noremap = true, desc = "Change Symbol Matches", silent = true })
 
 -- Add a new +insert keymap group
-wk.register({
-  ["<leader>"] = { i = { name = "insert" } },
+wk.add({
+  { "<leader>i",  name = "insert"  },
 })
 
 -- Runtime zoomimg in Neovide with neovide_scale_factor
