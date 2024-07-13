@@ -10,7 +10,10 @@ return {
     { mode = "n", "ghen", function() require("hearthmill").goto_next("element") end, desc = "Next Element" },
     { mode = "n", "ghep", function() require("hearthmill").goto_prev("element") end, desc = "Previous Element" },
     { mode = "n", "ghed", function() require("hearthmill").delete("element") end, desc = "Element Delete" },
+    { mode = "n", "ghet", function() require("hearthmill").transpose("element") end, desc = "Element Transpose" },
     { mode = "n", "ghev", function() require("hearthmill").vanish() end, desc = "Element Vanish" },
+    { mode = "n", "gher", function() require("hearthmill").rename() end, desc = "Element Rename" },
+    { mode = { "n", "o", "x" }, "ghew", function() require("hearthmill").wrap() end, desc = "Element Wrap" },
 
     { mode = "n", "ghas", function() require("hearthmill").select("attribute") end, desc = "Attribute Select" },
     { mode = "n", "ghab", function() require("hearthmill").goto_beginning("attribute") end, desc = "Attribute Beginning" },
@@ -18,6 +21,7 @@ return {
     { mode = "n", "ghan", function() require("hearthmill").goto_next("attribute") end, desc = "Next Attribute" },
     { mode = "n", "ghap", function() require("hearthmill").goto_prev("attribute") end, desc = "Previous Attribute" },
     { mode = "n", "ghad", function() require("hearthmill").delete("attribute") end, desc = "Attribute Delete" },
+    { mode = "n", "ghat", function() require("hearthmill").transpose("attribute") end, desc = "Attribute Transpose" },
 
     { mode = "n", "ghts", function() require("hearthmill").select("tag") end, desc = "Tag Select" },
     { mode = "n", "ghtb", function() require("hearthmill").goto_beginning("tag") end, desc = "Tag Beginning" },
