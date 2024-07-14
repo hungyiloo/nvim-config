@@ -94,14 +94,26 @@ vim.keymap.set("n", "<leader>wm", "<cmd>only<cr>", { desc = "Only Current Window
 vim.keymap.set("n", "<leader>ww", "<C-w>w", { desc = "Other Window" })
 
 -- Convenience mapping for changing multiple instances of a symbol
-vim.keymap.set({ "n", "v" }, "g*", function()
+vim.keymap.set({ "n", "v" }, "g/cn", function()
   vim.cmd("normal *N")
   vim.api.nvim_feedkeys("cgn", "n", true)
 end, { noremap = true, desc = "Change Symbol Matches", silent = true })
+vim.keymap.set({ "n", "v" }, "g/cN", function()
+  vim.cmd("normal *N")
+  vim.api.nvim_feedkeys("cgN", "n", true)
+end, { noremap = true, desc = "Change Symbol Matches Backwards", silent = true })
+vim.keymap.set({ "n", "v" }, "g/dn", function()
+  vim.cmd("normal *N")
+  vim.api.nvim_feedkeys("dgn", "n", true)
+end, { noremap = true, desc = "Delete Symbol Matches", silent = true })
+vim.keymap.set({ "n", "v" }, "g/dN", function()
+  vim.cmd("normal *N")
+  vim.api.nvim_feedkeys("dgN", "n", true)
+end, { noremap = true, desc = "Delete Symbol Matches Backwards", silent = true })
 
 -- Add a new +insert keymap group
 wk.add({
-  { "<leader>i",  name = "insert"  },
+  { "<leader>i",  name = "insert" },
 })
 
 -- Runtime zoomimg in Neovide with neovide_scale_factor
