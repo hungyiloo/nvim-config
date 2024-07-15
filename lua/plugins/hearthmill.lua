@@ -5,13 +5,13 @@ return {
     require("hearthmill").setup(opts)
 
     -- Add a new +hearthmill keymap group
-    local wk = require("which-key")
-    wk.add({
-      { "gh",  name = "hearthmill" },
-      { "ghe",  name = "element" },
-      { "gha",  name = "attribute" },
-      { "ght",  name = "tag" },
-    })
+    -- local wk = require("which-key")
+    -- wk.add({
+    --   { "gh", name = "hearthmill" },
+    --   { "ghe", name = "element" },
+    --   { "gha", name = "attribute" },
+    --   { "ght", name = "tag" },
+    -- })
   end,
   -- stylua: ignore
   keys = {
