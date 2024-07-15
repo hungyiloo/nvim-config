@@ -113,7 +113,7 @@ end, { noremap = true, desc = "Delete Symbol Matches Backwards", silent = true }
 
 -- Add a new +insert keymap group
 wk.add({
-  { "<leader>i",  name = "insert" },
+  { "<leader>i", name = "insert" },
 })
 
 -- Runtime zoomimg in Neovide with neovide_scale_factor
