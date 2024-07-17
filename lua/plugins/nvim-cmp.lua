@@ -47,7 +47,7 @@ return {
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
       -- Note that <C-Space> doesn't work in neovide on windows because of OS keybinding issues (probably?)
       ["<C-.>"] = cmp.mapping.complete({
-        reason = cmp.ContextReason.Auto,
+        reason = cmp.ContextReason.Manual,
       }),
       ["<C-e>"] = cmp.mapping.abort(),
       -- 'select = false' to only confirm explicitly selected item
