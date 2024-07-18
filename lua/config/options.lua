@@ -18,7 +18,7 @@ vim.g.neovide_text_contrast = 0.1
 -- vim.g.neovide_text_gamma = 0.7
 -- vim.g.neovide_text_contrast = 0.1
 -- and these for low DPI displays
--- vim.g.neovide_text_gamma = 1.1
+-- vim.g.neovide_text_gamma = 1.2
 -- vim.g.neovide_text_contrast = 0.5
 
 -- show a more useful window title
