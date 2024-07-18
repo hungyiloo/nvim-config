@@ -3,6 +3,7 @@ local M = { disable_which_key = false }
 return {
   "folke/which-key.nvim",
   opts = {
+    preset = "modern",
     filter = function()
       return not M.disable_which_key
     end,
@@ -22,7 +23,7 @@ return {
           M.disable_which_key = true
         else
           M.disable_which_key = false
-          vim.cmd([[WhichKey]])
+          require("which-key/buf").check()
         end
       end,
     })
