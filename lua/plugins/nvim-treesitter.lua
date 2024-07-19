@@ -37,5 +37,10 @@ return {
       },
     })
     vim.treesitter.language.register("numbat", "numbat")
+
+
+    -- This fixes angular treesitter support for the new "htmlangular" filetype
+    -- set by Neovim. This may be done automatically by nvim-treesitter eventually?
+    vim.treesitter.language.register("angular", "htmlangular")
   end,
 }
