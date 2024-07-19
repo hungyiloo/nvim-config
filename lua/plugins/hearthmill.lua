@@ -1,7 +1,7 @@
 return {
   "hearthmill",
   dev = true,
-  config = function (_, opts)
+  config = function(_, opts)
     require("hearthmill").setup(opts)
 
     -- Add a new +hearthmill keymap group
@@ -29,6 +29,7 @@ return {
     { mode = { "n", "x" }, "ghew", function() require("hearthmill").wrap() end, desc = "[e]lement [w]rap" },
     { mode = "n", "gheu", function() require("hearthmill").unwrap() end, desc = "[e]lement [u]nwrap" },
     { mode = "n", "ghe=", function() require("hearthmill").clone("element") end, desc = "[e]lement clone [=]" },
+    { mode = "n", "ghe<CR>", function() require("hearthmill").break_lines("element") end, desc = "[e]lement break lines [RET]" },
 
     { mode = { "n", "o", "x" }, "ghas", function() require("hearthmill").select("attribute") end, desc = "[a]ttribute [s]elect" },
     { mode = { "n", "o", "x" }, "ghac", function() require("hearthmill").select_contents("attribute") end, desc = "[a]ttribute select [c]ontents" },
@@ -48,5 +49,17 @@ return {
     { mode = { "n", "o", "x" }, "ghtn", function() require("hearthmill").goto_next("tag") end, desc = "[t]ag [n]ext" },
     { mode = { "n", "o", "x" }, "ghtp", function() require("hearthmill").goto_prev("tag") end, desc = "[t]ag [p]revious" },
     { mode = "n", "ghtd", function() require("hearthmill").delete("tag") end, desc = "[t]ag [d]elete" },
+    { mode = "n", "ght<CR>", function() require("hearthmill").break_lines("tag") end, desc = "[t]ag break lines [RET]" },
+
+    {
+      mode = "n",
+      "gh<CR>",
+      function()
+        require("hearthmill").break_lines("element")
+        require("hearthmill").break_lines("tag")
+      end,
+      desc = "Break lines [RET]"
+    },
   }
+,
 }
