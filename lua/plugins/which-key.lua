@@ -3,7 +3,6 @@ local M = { disable_which_key = false }
 return {
   "folke/which-key.nvim",
   opts = {
-    preset = "modern",
     filter = function()
       return not M.disable_which_key
     end,
@@ -23,6 +22,9 @@ return {
           M.disable_which_key = true
         else
           M.disable_which_key = false
+          -- This resets which-key more fully after the forced disable.
+          -- Without something here, some keys no longer trigger which-key
+          -- anymore (e.g. " for registers)
           require("which-key/buf").check()
         end
       end,
