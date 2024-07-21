@@ -2,16 +2,20 @@ return {
   "folke/flash.nvim",
   -- stylua: ignore
   keys = {
-    -- Disable LazyVim's default "s" related keymaps for flash because they
+    -- Disable most of LazyVim's default "s" related keymaps for flash because they
     -- conflict with my muscle memory for mini.surround (which I use a lot more)
-    { "s", mode = { "n", "x", "o" }, false },
+    { "s", mode = { "x", "o" }, false },
     { "S", mode = { "n", "o", "x" }, false },
 
-    -- Instead, replace them with backslash for easy access.
+    -- Instead, replace them , and ; for easy access.
     -- I'm hoping that putting them on an easy to reach keymap will encourage
-    -- me to use it more, as I currently don't
-    { "\\", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-    { "g\\", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+    -- me to use it more, as I currently don't.
+    --
+    -- What happens to the default function of , and ;? The current f and t
+    -- motions can be intuitively repeated by pressing f/F or t/T, which more
+    -- efficiently uses those keys, thus freeing up , and ;
+    { ",", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+    { ";", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
 
     -- These are the same as the defaults
     { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
