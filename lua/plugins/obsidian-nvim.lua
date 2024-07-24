@@ -26,5 +26,8 @@ return {
         path = "~/obsidian/work",
       },
     },
+    ui = {
+      enable = false -- preferably rely on markdown.nvim for UI features
+    }
   },
 }
