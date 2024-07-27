@@ -12,10 +12,10 @@ vim.opt.linespace = 2
 vim.g.neovide_floating_shadow = false
 
 -- adjust font rendering, especially important for low DPI displays
-vim.g.neovide_text_gamma = 0.7
+vim.g.neovide_text_gamma = 0.6
 vim.g.neovide_text_contrast = 0.1
 -- Try these for high DPI displays
--- vim.g.neovide_text_gamma = 0.7
+-- vim.g.neovide_text_gamma = 0.6
 -- vim.g.neovide_text_contrast = 0.1
 -- and these for low DPI displays
 -- vim.g.neovide_text_gamma = 1.2
