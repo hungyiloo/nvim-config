@@ -1,18 +1,6 @@
 return {
-  "hearthmill",
-  dev = true,
-  config = function(_, opts)
-    require("hearthmill").setup(opts)
-
-    -- Add a new +hearthmill keymap group
-    -- local wk = require("which-key")
-    -- wk.add({
-    --   { "gh", name = "hearthmill" },
-    --   { "ghe", name = "element" },
-    --   { "gha", name = "attribute" },
-    --   { "ght", name = "tag" },
-    -- })
-  end,
+  "hungyiloo/hearthmill.nvim",
+  branch = "dev",
   -- stylua: ignore
   keys = {
     { mode = { "n", "o", "x" }, "ghes", function() require("hearthmill").select("element") end, desc = "[e]lement [s]elect" },
