@@ -17,18 +17,6 @@ return {
       end,
       desc = "Insert Snippet",
     },
-    {
-      "<C-x><C-x>s",
-      mode = { "i" },
-      function()
-        require("cmp").complete({
-          config = {
-            sources = { { name = "snippets" } },
-          },
-        })
-      end,
-      desc = "Insert Snippet",
-    },
   },
   opts = function(_, opts)
     local cmp = require("cmp")
@@ -46,9 +34,7 @@ return {
       ["<C-b>"] = cmp.mapping.scroll_docs(-4),
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
       -- Note that <C-Space> doesn't work in neovide on windows because of OS keybinding issues (probably?)
-      ["<C-.>"] = cmp.mapping.complete({
-        reason = cmp.ContextReason.Manual,
-      }),
+      ["<C-.>"] = cmp.mapping.complete({ reason = cmp.ContextReason.Manual, }),
       ["<C-e>"] = cmp.mapping.abort(),
       -- 'select = false' to only confirm explicitly selected item
       ["<CR>"] = cmp.mapping.confirm({ select = true }),
@@ -58,6 +44,14 @@ return {
         cmp.abort()
         fallback()
       end,
+      ["<C-s>"] = function ()
+        require("cmp").complete({
+          reason = cmp.ContextReason.Manual,
+          config = {
+            sources = { { name = "snippets" } },
+          },
+        })
+      end
     })
 
     -- Don't include snippets in autocomplete by default.
