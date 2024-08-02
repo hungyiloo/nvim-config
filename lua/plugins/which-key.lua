@@ -25,7 +25,7 @@ return {
           -- This resets which-key more fully after the forced disable.
           -- Without something here, some keys no longer trigger which-key
           -- anymore (e.g. " for registers)
-          require("which-key/buf").get()
+          require("which-key").show({ defer = true })
         end
       end,
     })
