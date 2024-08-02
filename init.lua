@@ -17,5 +17,5 @@ end
 -- convenience function for forcibly re-requiring a module
 function _G.rerequire(module_name)
   package.loaded[module_name] = nil
-  require(module_name)
+  return require(module_name)
 end
