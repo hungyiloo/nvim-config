@@ -9,10 +9,9 @@ vim.keymap.set("n", "<leader>fs", ":w<CR>", { noremap = true, silent = true, des
 -- Add a familiar command running shortcut
 vim.keymap.set("n", "<leader>;", ":", { noremap = true, silent = false, desc = "Command" })
 
--- Remap 'zF' to update folds (default function of 'zx')
--- and remap 'zx' to delete the buffer
-vim.keymap.set("n", "zF", "zx", { noremap = true, silent = true, desc = "Update folds" })
-vim.keymap.set("n", "zx", LazyVim.ui.bufremove, { noremap = true, silent = true, desc = "Delete Buffer" })
+-- NOTE: Here, I used to remap "zx" to delete the buffer, but this interferes
+-- with grug-far (as of 2024-08-03) So I decided to give up my muscle memory
+-- and do without this remapping. It's better for my pinky, anyway!
 
 -- A shortcut to close all buffers and "reset" the visual layout
 vim.keymap.set("n", "<leader>bx", function()
