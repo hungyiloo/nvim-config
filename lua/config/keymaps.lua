@@ -68,7 +68,7 @@ vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true, desc = "Delete Last Wor
 vim.keymap.set("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
 vim.keymap.set("n", "<leader><tab>f", "<cmd>tabfirst<cr>", { desc = "First Tab" })
 vim.keymap.set("n", "<leader><tab>n", "<cmd>tabnew<cr>", { desc = "New Tab" })
--- vim.keymap.set("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+vim.keymap.set("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 -- vim.keymap.set("n", "<leader><tab>d", function()
 --   vim.cmd("windo bd")
 --   if vim.fn.tabpagenr("$") > 1 then
