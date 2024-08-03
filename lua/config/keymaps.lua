@@ -43,12 +43,12 @@ vim.keymap.set("v", "<f4>", "<cmd>normal Q<cr>", { noremap = true, silent = true
 vim.keymap.set("n", "<f1>", function()
   local macro = vim.fn.getreg("+")
   vim.fn.setreg("q", vim.api.nvim_replace_termcodes(macro, true, true, true))
-  vim.notify(macro, vim.log.levels.INFO, { title = 'Loaded clipboard macro into @q' })
+  vim.notify(macro, vim.log.levels.INFO, { title = "Loaded clipboard macro into @q" })
 end, { noremap = true, silent = true, desc = "Load macro from clipboard" })
 vim.keymap.set("n", "<f2>", function()
   local macro_escaped = vim.fn.keytrans(vim.fn.getreg("q"))
   vim.fn.setreg("+", macro_escaped)
-  vim.notify(macro_escaped, nil, { title = 'Saved into clipboard'})
+  vim.notify(macro_escaped, nil, { title = "Saved into clipboard" })
 end, { noremap = true, silent = true, desc = "Save macro to clipboard" })
 
 -- Evaluate/execute lua
@@ -117,21 +117,21 @@ wk.add({
 })
 
 -- Runtime zoomimg in Neovide with neovide_scale_factor
-vim.keymap.set("n", "<C-=>", function ()
+vim.keymap.set("n", "<C-=>", function()
   if not vim.g.neovide_scale_factor then
     vim.g.neovide_scale_factor = 1
   end
   vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.05
   vim.cmd([[redraw!]])
 end, { desc = "Zoom In" })
-vim.keymap.set("n", "<C-->", function ()
+vim.keymap.set("n", "<C-->", function()
   if not vim.g.neovide_scale_factor then
     vim.g.neovide_scale_factor = 1
   end
   vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.05
   vim.cmd([[redraw!]])
 end, { desc = "Zoom Out" })
-vim.keymap.set("n", "<C-0>", function ()
+vim.keymap.set("n", "<C-0>", function()
   vim.g.neovide_scale_factor = 1
   vim.cmd([[redraw!]])
 end, { desc = "Reset Zoom" })

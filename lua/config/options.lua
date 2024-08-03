@@ -25,12 +25,12 @@ vim.g.neovide_text_contrast = 0.1
 vim.o.title = true
 vim.o.titlestring = '%{empty(expand("%:t")) ? "Neovim" : expand("%:t") . " - " . expand("%:~:h") . " - Neovim"}'
 
--- disable autoformatting on save on startup 
+-- disable autoformatting on save on startup
 -- (but this can be enabled by <leader>uf)
 vim.g.autoformat = false
 
 -- always use pwsh as the shell
-vim.opt.shell = 'pwsh'
+vim.opt.shell = "pwsh"
 -- using pwsh needs a shell command flag set
 -- https://github.com/neovim/neovim/issues/13893
-vim.opt.shellcmdflag = '-c'
+vim.opt.shellcmdflag = "-c"
