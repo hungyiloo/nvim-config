@@ -1,8 +1,8 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    opts = {
-      defaults = {
+    opts = function(_, opts)
+      opts. defaults = {
         mappings = {
           i = {
             ["<C-,>"] = require("telescope.actions.layout").toggle_preview,
@@ -11,8 +11,20 @@ return {
         preview = {
           hide_on_startup = true, -- hide previewer when picker starts
         },
-      },
-    },
+      }
+      opts.extensions = {
+        live_grep_args = {
+          auto_quoting = true, -- enable/disable auto-quoting
+          -- define mappings, e.g.
+          mappings = { -- extend mappings
+            i = {
+              ["<C-k>"] = require("telescope-live-grep-args.actions").quote_prompt(),
+              ["<C-g>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " --iglob " }),
+            },
+          },
+        },
+      }
+    end,
     keys = {
       {
         "<leader>,",
