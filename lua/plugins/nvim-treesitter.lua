@@ -25,9 +25,7 @@ return {
       },
     })
     vim.treesitter.language.register("numbat", "numbat")
-    if type(opts.ensure_installed) == "table" then
-      vim.list_extend(opts.ensure_installed, { "numbat" })
-    end
+    vim.list_extend(opts.ensure_installed, { "numbat" })
 
     -- HACK: Pinned TSX to this commit because of these issues:
     --       https://github.com/tree-sitter/tree-sitter-javascript/issues/329
