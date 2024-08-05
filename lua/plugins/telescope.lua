@@ -2,7 +2,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     opts = function(_, opts)
-      opts. defaults = {
+      opts.defaults = {
         mappings = {
           i = {
             ["<C-,>"] = require("telescope.actions.layout").toggle_preview,
@@ -37,10 +37,9 @@ return {
       },
       {
         "<leader>/",
-        function()
-          require("telescope").extensions.live_grep_args.live_grep_args({ search_dirs = { LazyVim.root.git() } })
-        end,
-        desc = "Live Grep (Root Dir)",
+        ":Telescope current_buffer_fuzzy_find<cr>",
+        desc = "Fuzzy Search",
+        silent = true
       },
       {
         "<leader>sg",
