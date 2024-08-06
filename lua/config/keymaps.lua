@@ -20,9 +20,6 @@ vim.keymap.set("n", "<leader>bx", function()
   vim.cmd("silent only")
 end, { noremap = true, silent = true, desc = "Close all buffers" })
 
--- Browse the current directory using Oil
-vim.keymap.set("n", "<leader>f.", "<cmd>Oil<cr>", { noremap = true, silent = true, desc = "Browse current directory" })
-
 -- Tools for adding blank lines above/below cursor without changing position
 vim.keymap.set("n", "]<space>", "m`o<esc>``", { noremap = true, silent = true, desc = "Insert blank line below" })
 vim.keymap.set("n", "[<space>", "m`O<esc>``", { noremap = true, silent = true, desc = "Insert blank line above" })

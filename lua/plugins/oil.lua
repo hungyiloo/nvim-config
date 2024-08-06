@@ -6,4 +6,7 @@ return {
   opts = {},
   -- Optional dependencies
   dependencies = { "nvim-tree/nvim-web-devicons" },
+  keys = {
+    { "<leader>f.", mode = "n", "<cmd>Oil --float<cr>", desc = "Browse with oil", silent = true, noremap = true },
+  },
 }
