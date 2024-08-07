@@ -106,6 +106,10 @@ vim.keymap.set({ "n", "x" }, "g/D", function()
   vim.cmd("normal *N")
   vim.api.nvim_feedkeys("dgN", "n", true)
 end, { noremap = true, desc = "Delete Symbol Matches Backwards", silent = true })
+vim.keymap.set({ "n", "x" }, "g/r", function ()
+  vim.cmd("normal *N")
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(":%s/<c-r>//", true, true, true), "n", true)
+end, { noremap = true, desc = "Replace Symbol Matches", silent = true })
 
 -- Add a new +insert keymap group
 wk.add({
