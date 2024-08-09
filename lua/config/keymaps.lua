@@ -79,16 +79,6 @@ vim.keymap.set("n", "<leader><tab>4", "<cmd>tabn4<cr>", { desc = "Go To Tab #4" 
 vim.keymap.set("n", "<leader><tab>5", "<cmd>tabn5<cr>", { desc = "Go To Tab #5" })
 vim.keymap.set("n", "<leader><tab>6", "<cmd>tabn6<cr>", { desc = "Go To Tab #6" })
 
--- Remap window maximisation functionality to delete other windows
-vim.keymap.set("n", "<leader>wM", function()
-  LazyVim.toggle.maximize()
-end, { desc = "Maximize Toggle" })
-vim.keymap.set("n", "<leader>wm", "<cmd>only<cr>", { desc = "Only Current Window" })
-
--- "Other window" should cycle through all the windows, like emacs
--- instead of whatever behavior <C-w>p provides, which feels inconsistent to me
-vim.keymap.set("n", "<leader>ww", "<C-w>w", { desc = "Other Window" })
-
 -- Convenience mapping for changing multiple instances of a symbol
 vim.keymap.set({ "n", "x" }, "g/c", function()
   vim.cmd("normal *N")
