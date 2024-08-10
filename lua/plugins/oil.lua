@@ -7,6 +7,6 @@ return {
   -- Optional dependencies
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
-    { "<leader>f.", mode = "n", "<cmd>Oil --float<cr>", desc = "Browse with oil", silent = true, noremap = true },
+    { "<leader>f.", mode = "n", "<cmd>Oil --float<cr>", desc = "Directory Editor", silent = true, noremap = true },
   },
 }
