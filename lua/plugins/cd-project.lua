@@ -43,7 +43,7 @@ return {
     hooks = {
       {
         callback = function(dir)
-          vim.notify("   " .. dir)
+          vim.notify("   " .. dir, vim.log.levels.INFO, { title = "Changed Directory" })
           vim.defer_fn(function()
             if vim.fn.expand("%") == "" then
               vim.cmd([[Dashboard]])
