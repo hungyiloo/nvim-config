@@ -1,6 +1,8 @@
 return {
-  "hungyiloo/hearthmill.nvim",
-  branch = "dev",
+  -- "hungyiloo/hearthmill.nvim",
+  -- branch = "dev",
+  "hearthmill.nvim",
+  dev = true,
   -- stylua: ignore
   keys = {
     { mode = { "n", "o", "x" }, "ghes", function() require("hearthmill").select("element") end, desc = "[e]lement [s]elect" },
