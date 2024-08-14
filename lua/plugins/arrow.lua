@@ -5,6 +5,7 @@ return {
   event = "BufReadPost",
   opts = {
     show_icons = true,
+    show_cheatsheet = false,
     save_key = "git_root",
     mappings = {
       ["Jump to Directory"] = "j"
