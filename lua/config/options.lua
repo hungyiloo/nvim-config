@@ -30,7 +30,8 @@ vim.o.titlestring = '%{empty(expand("%:t")) ? "Neovim" : expand("%:t") . " - " .
 vim.g.autoformat = false
 
 -- always use pwsh as the shell
-vim.opt.shell = "pwsh"
+vim.opt.shell = 'pwsh'
 -- using pwsh needs a shell command flag set
 -- https://github.com/neovim/neovim/issues/13893
-vim.opt.shellcmdflag = "-c"
+vim.opt.shellcmdflag = '-nologo -noprofile -ExecutionPolicy RemoteSigned -command'
+vim.opt.shellxquote = ''
