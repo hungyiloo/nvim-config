@@ -48,6 +48,18 @@ return {
           },
         },
       }
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "cs",
+        callback = function()
+          vim.cmd([[set shiftwidth=4]])
+          vim.cmd([[set tabstop=4]])
+          vim.cmd([[set nocindent]])
+          vim.cmd([[set autoindent]])
+          vim.cmd([[set smartindent]])
+          vim.cmd([[set indentexpr=]])
+        end
+      })
     end
   },
 }
