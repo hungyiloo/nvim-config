@@ -11,21 +11,4 @@ return {
     { "g/s", mode = { "n", "o", "x" }, function() require("flash").treesitter_search() end, desc = "Search Treesitter" },
     { "<c-s>", mode = "c", function() require("flash").toggle() end, desc = "Toggle Flash Search" },
   },
-  opts = {
-    modes = {
-      char = {
-        char_actions = function(motion)
-          return {
-            [";"] = "next", -- set to `right` to always go right
-            [","] = "prev", -- set to `left` to always go left
-            -- commenting the below two lines disables clever-f style
-            [motion:lower()] = nil,
-            [motion:upper()] = nil,
-            -- WARNING: special care still needs to be taken when recording
-            -- macros wish flash char mode, as clever-f behavior seems to remain.
-          }
-        end,
-      }
-    }
-  }
 }
