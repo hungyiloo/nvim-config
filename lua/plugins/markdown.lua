@@ -9,11 +9,4 @@ return {
       opts.linters_by_ft.markdown = {}
     end,
   },
-
-  {
-    "MeanderingProgrammer/markdown.nvim",
-    opts = function(_, opts)
-      opts.code.border = "thick" -- thin borders don't look great with my environment/font
-    end,
-  },
 }
