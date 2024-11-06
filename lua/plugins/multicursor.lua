@@ -9,6 +9,7 @@ return {
       elseif mc.hasCursors() then
         mc.clearCursors()
       else
+        -- This hopefully replicates the default lazyvim <esc> behavior, since we've overridden the default keybinding
         vim.cmd("noh")
         vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<esc>", true, true, true), "n", true)
       end
@@ -55,7 +56,7 @@ return {
     hl(0, "MultiCursorDisabledCursor", { link = "Visual" })
     hl(0, "MultiCursorDisabledVisual", { link = "Visual" })
     hl(0, "MultiCursorDisabledSign", { link = "SignColumn" })
-    --
+
     -- Use the following line to make the multicursor cursor visually identical to the real cursor
     -- hl(0, "MultiCursorCursor", { link = "Cursor" })
     -- I prefer a customised look to differentiate them from the real cursor
