@@ -9,7 +9,7 @@ vim.g.neovide_cursor_vfx_mode = "railgun"
 vim.opt.linespace = 2
 
 -- shadows for floating windows sometimes make overlays look janky
-vim.g.neovide_floating_shadow = false
+-- vim.g.neovide_floating_shadow = false
 
 -- adjust font rendering, especially important for low DPI displays
 vim.g.neovide_text_gamma = 1.2
@@ -31,7 +31,10 @@ vim.g.autoformat = false
 
 -- always use pwsh as the shell
 vim.opt.shell = 'pwsh'
+
+-- NOTE: currently trying out default LazyVim pwsh config instead of the below
+-- 
 -- using pwsh needs a shell command flag set
 -- https://github.com/neovim/neovim/issues/13893
-vim.opt.shellcmdflag = '-nologo -noprofile -ExecutionPolicy RemoteSigned -command'
-vim.opt.shellxquote = ''
+-- vim.opt.shellcmdflag = '-nologo -noprofile -ExecutionPolicy RemoteSigned -command'
+-- vim.opt.shellxquote = ''
