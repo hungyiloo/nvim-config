@@ -1,32 +1,25 @@
 return {
-  "nvimdev/dashboard-nvim",
+  "folke/snacks.nvim",
   opts = function(_, opts)
-    local logo = [[
-███╗   ██╗ ███████╗  ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗
-████╗  ██║ ██╔════╝ ██╔═══██╗ ██║   ██║ ██║ ████╗ ████║
-██╔██╗ ██║ █████╗   ██║   ██║ ██║   ██║ ██║ ██╔████╔██║
-██║╚██╗██║ ██╔══╝   ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║
-██║ ╚████║ ███████╗ ╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║
-╚═╝  ╚═══╝ ╚══════╝  ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝
-    ]]
-    logo = string.rep("\n", 8) .. logo .. "\n\n"
-    opts.config.header = vim.split(logo, "\n")
+    opts.dashboard.preset.header = [[
+███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]]
 
-    -- -- Add a custom "projects" menu item
-    local projects = {
-      action = "CdProject",
-      desc = " Projects",
-      icon = " ",
-      key = "p",
-    }
-    projects.desc = projects.desc .. string.rep(" ", 43 - #projects.desc)
-    projects.key_format = "  %s"
-    table.insert(opts.config.center, 3, projects)
-
-    opts.hide = {
-      statusline = false,
-      tabline = false,
-      winbar = false,
+    opts.dashboard.preset.keys = {
+      { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+      { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+      { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
+      { icon = " ", key = "r", desc = "Recent Files (cwd)", action = ":lua Snacks.dashboard.pick('oldfiles', { cwd_only = true })" },
+      { icon = " ", key = "R", desc = "Recent Files (all)", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+      { icon = " ", key = "p", desc = "Projects", action = ":CdProject", },
+      { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
+      -- { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+      { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
+      { icon = " ", key = "q", desc = "Quit", action = ":qa" },
     }
   end,
 }
