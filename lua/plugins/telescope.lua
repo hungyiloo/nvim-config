@@ -55,6 +55,11 @@ return {
         end,
         desc = "Live Grep (cwd)",
       },
+
+      -- Customised pickers for recent files that take into account the cwd/project.
+      -- Uses the matching shortcuts from the dashboard config (see ../plugins/dashboard.lua)
+      { "<leader>fr", ":lua Snacks.dashboard.pick('oldfiles', { cwd_only = true })<cr>", desc = "Recent (cwd)" },
+      { "<leader>fR", ":lua Snacks.dashboard.pick('oldfiles')<cr>", desc = "Recent (all)" },
     },
     dependencies = {
       {
