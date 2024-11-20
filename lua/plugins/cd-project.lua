@@ -46,7 +46,7 @@ return {
           vim.notify("   " .. dir, vim.log.levels.INFO, { title = "Changed Directory" })
           vim.defer_fn(function()
             if vim.fn.expand("%") == "" then
-              require("snacks").dashboard.open({ win = 0 })
+              require("snacks").dashboard.open({ win = 0, buf = 0 })
             end
           end, 100)
         end,
