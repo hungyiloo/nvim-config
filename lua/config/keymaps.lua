@@ -16,7 +16,7 @@ vim.keymap.set("n", "<leader>;", ":", { noremap = true, silent = false, desc = "
 -- A shortcut to close all buffers and "reset" the visual layout
 vim.keymap.set("n", "<leader>bx", function()
   vim.cmd("%bd")
-  require("snacks").dashboard.open({ win = 0 })
+  Snacks.dashboard.open({ win = 0, buf = 0 })
   vim.cmd("silent only")
 end, { noremap = true, silent = true, desc = "Close all buffers" })
 

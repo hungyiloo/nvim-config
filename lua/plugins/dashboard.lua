@@ -1,5 +1,23 @@
+
 return {
   "folke/snacks.nvim",
+  init = function()
+    vim.g.snacks_dashboard_open = true
+
+    vim.api.nvim_create_autocmd("User", {
+      pattern = "SnacksDashboardOpened",
+      callback = function()
+        vim.g.snacks_dashboard_open = true
+      end,
+    })
+
+    vim.api.nvim_create_autocmd("User", {
+      pattern = "SnacksDashboardClosed",
+      callback = function()
+        vim.g.snacks_dashboard_open = false
+      end,
+    })
+  end,
   opts = function(_, opts)
     opts.dashboard.preset.header = [[
 ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
@@ -20,7 +38,7 @@ return {
       { icon = " ", key = "g", desc = "Lazygit", action = ":lua Snacks.lazygit()" },
       { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
       -- { icon = " ", key = "s", desc = "Restore Session", section = "session" },
-      { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
+      { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
       { icon = " ", key = "q", desc = "Quit", action = ":qa" },
     }
   end,
