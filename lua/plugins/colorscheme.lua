@@ -28,6 +28,8 @@ return {
       if not vim.g.neovide then
         opts.transparent_background = true
       end
+
+      opts.snacks = true
     end,
   },
   -- {
