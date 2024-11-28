@@ -30,7 +30,7 @@ vim.o.titlestring = '%{empty(expand("%:t")) ? "Neovim" : expand("%:t") . " - " .
 vim.g.autoformat = false
 
 -- always use pwsh as the shell
-vim.opt.shell = 'pwsh'
+-- vim.opt.shell = 'pwsh'
 
 -- NOTE: currently trying out default LazyVim pwsh config instead of the below
 -- 
