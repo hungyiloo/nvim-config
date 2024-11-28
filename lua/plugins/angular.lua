@@ -17,7 +17,7 @@ return {
       --       This coincidentally fixes inconsistent behavior in nvim-ts-autotag in htmlangular templates
       parser_config.angular.install_info.url = "https://github.com/hungyiloo/tree-sitter-angular"
       parser_config.angular.install_info.branch = "fix-style-binding-percent-unit"
-      parser_config.angular.install_info.revision = "6cbab4576f6b17b70aca990b1d6fe55bfcdb4669"
+      parser_config.angular.install_info.revision = "cac3997122a19ad5dc95be021070a4bf88fb7238"
     end
   }
 }
