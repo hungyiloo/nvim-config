@@ -26,12 +26,5 @@ return {
     })
     vim.treesitter.language.register("numbat", "numbat")
     vim.list_extend(opts.ensure_installed, { "numbat" })
-
-    -- HACK: Pinned TSX to this commit because of these issues:
-    --       https://github.com/tree-sitter/tree-sitter-javascript/issues/329
-    --       also briefly mentioned here: https://github.com/nvim-treesitter/nvim-treesitter/pull/6873
-    --       but the nvim-treesitter maintaners forgot to hold off on updating
-    --       typescript/tsx, which is depends on the broken updated javascript parser.
-    parser_config.tsx.install_info.revision = "4f3eb6655a1cd1a1f87ef10201f8e22886dcd76e"
   end,
 }
