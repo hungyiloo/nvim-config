@@ -30,6 +30,7 @@ return {
       end
 
       opts.snacks = true
+      opts.term_colors = true
     end,
   },
   -- {
