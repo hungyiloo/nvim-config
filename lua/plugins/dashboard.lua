@@ -31,7 +31,7 @@ return {
       { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
       { icon = " ", key = ".", desc = "Directory Editor", action = ":Oil --float" },
       { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-      { icon = " ", key = "s", desc = "Find Text", action = ":lua require('telescope').extensions.live_grep_args.live_grep_args({ search_dirs = { LazyVim.root.cwd() } })" },
+      { icon = " ", key = "s", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep_glob')" },
       { icon = " ", key = "r", desc = "Project Recent Files (cwd)", action = ":lua Snacks.dashboard.pick('oldfiles', { cwd_only = true })" },
       { icon = " ", key = "R", desc = "All Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
       { icon = " ", key = "p", desc = "Projects", action = ":CdProject", },
