@@ -25,10 +25,7 @@ return {
           RenderMarkdownCodeInline = { bg = "#181926" },
         }
       end
-      if not vim.g.neovide then
-        opts.transparent_background = true
-      end
-
+      opts.transparent_background = not vim.g.neovide
       opts.snacks = true
       opts.term_colors = true
     end,
