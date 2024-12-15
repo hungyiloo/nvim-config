@@ -23,6 +23,9 @@ return {
           RenderMarkdownH6Bg = { bg = "#1f2447" },
           RenderMarkdownCode = { bg = "#181926" },
           RenderMarkdownCodeInline = { bg = "#181926" },
+
+          -- custom highlights for snacks.indent
+          SnacksIndent = { fg = "#272839"}
         }
       end
       opts.transparent_background = not vim.g.neovide
