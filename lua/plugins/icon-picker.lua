@@ -6,24 +6,28 @@ return {
         mode = { "n" },
         "<leader>iu",
         function ()
-          vim.ui.input(
-            { prompt = "Filter unicode characters" },
-            function (query)
-              if not query then return end
-              vim.ui.select(
-                vim.fn['unicode#FindUnicodeBy'](query),
-                {
-                  prompt = "Select a unicode character",
-                  format_item = function (item)
-                    return item.name .. ": " .. item.glyph
-                  end
-                },
-                function (choice)
-                  if choice then
-                    vim.cmd("normal i" .. choice.glyph)
-                  end
-                end
-              )
+          local unicode_data_file = vim.fn.stdpath("data") .. "/site/unicode/UnicodeData.txt"
+          local unicode_data = {}
+          for line in io.lines(unicode_data_file) do
+            local parts = string.gmatch(line, "([^;]+)")
+            local code = parts()
+            local name = parts()
+            if name and name ~= "<control>" then
+              table.insert(unicode_data, { glyph = vim.fn.nr2char(tonumber(code, 16)), name = name })
+            end
+          end
+          vim.ui.select(
+            unicode_data,
+            {
+              prompt = "Select a unicode character",
+              format_item = function (item)
+                return ("%-80s"):format(item.name) .. " " .. item.glyph
+              end
+            },
+            function (choice)
+              if choice then
+                vim.cmd("normal i" .. choice.glyph)
+              end
             end
           )
         end,
