@@ -24,8 +24,9 @@ return {
           RenderMarkdownCode = { bg = "#181926" },
           RenderMarkdownCodeInline = { bg = "#181926" },
 
-          -- custom highlights for snacks.indent
-          SnacksIndent = { fg = "#272839"}
+          -- custom highlights for snacks.indent and snacks.dim
+          SnacksIndent = { fg = "#272839"},
+          SnacksDim = { fg = colors.surface2 },
         }
       end
       opts.transparent_background = not vim.g.neovide
