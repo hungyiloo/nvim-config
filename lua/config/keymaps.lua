@@ -126,3 +126,6 @@ vim.keymap.set("n", "<C-0>", function()
   vim.g.neovide_scale_factor = 1
   vim.cmd([[redraw!]])
 end, { desc = "Reset Zoom" })
+
+-- Allow pasting into terminal windows
+vim.keymap.set("t", "<C-r>", [['<C-\><C-N>"'.nr2char(getchar()).'pi']], { expr = true })
