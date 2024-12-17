@@ -38,3 +38,6 @@ vim.g.autoformat = false
 -- https://github.com/neovim/neovim/issues/13893
 -- vim.opt.shellcmdflag = '-nologo -noprofile -ExecutionPolicy RemoteSigned -command'
 -- vim.opt.shellxquote = ''
+
+-- Disable all snacks animations
+vim.g.snacks_animate = false
