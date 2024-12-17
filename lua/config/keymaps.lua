@@ -20,9 +20,10 @@ vim.keymap.set("n", "<leader>bx", function()
   vim.cmd("silent only")
 end, { noremap = true, silent = true, desc = "Close all buffers" })
 
--- Tools for adding blank lines above/below cursor without changing position
-vim.keymap.set("n", "]<space>", "m`o<esc>``", { noremap = true, silent = true, desc = "Insert blank line below" })
-vim.keymap.set("n", "[<space>", "m`O<esc>``", { noremap = true, silent = true, desc = "Insert blank line above" })
+-- No need for ]<space> and [<space keymaps for inserting blank lines anymore
+-- because neovim implemented them natively!
+-- vim.keymap.set("n", "]<space>", "m`o<esc>``", { noremap = true, silent = true, desc = "Insert blank line below" })
+-- vim.keymap.set("n", "[<space>", "m`O<esc>``", { noremap = true, silent = true, desc = "Insert blank line above" })
 
 -- Allow F11 for fullscreen toggle
 vim.keymap.set(
