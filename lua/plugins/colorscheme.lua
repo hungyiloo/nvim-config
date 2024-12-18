@@ -32,6 +32,7 @@ return {
       opts.transparent_background = not vim.g.neovide
       opts.snacks = true
       opts.term_colors = true
+      opts.fzf = true
     end,
   },
   -- {
