@@ -21,7 +21,7 @@ return {
             {
               prompt = "Select a unicode character",
               format_item = function (item)
-                return ("%-80s"):format(item.name) .. " " .. item.glyph
+                return "\t" .. item.glyph .. "\t" .. item.name
               end
             },
             function (choice)
@@ -52,12 +52,12 @@ return {
   },
   {
     "allaman/emoji.nvim",
-    cmd = "EmojiInsert",
+    cmd = "Emoji",
     keys = {
       {
         mode = { "n" },
         "<leader>ie",
-        "<cmd>EmojiInsert<cr>",
+        "<cmd>Emoji insert<cr>",
         desc = "Insert Emoji",
         noremap = true,
         silent = true,
