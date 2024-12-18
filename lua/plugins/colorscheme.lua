@@ -27,6 +27,9 @@ return {
           -- custom highlights for snacks.indent and snacks.dim
           SnacksIndent = { fg = "#272839"},
           SnacksDim = { fg = colors.surface2 },
+
+          -- custom highlights for fzf-lua
+          FzfLuaDirPart = { fg = colors.surface2 }
         }
       end
       opts.transparent_background = not vim.g.neovide
