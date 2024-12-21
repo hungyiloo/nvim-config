@@ -10,7 +10,7 @@ return {
       trigger = {
         -- By default this is true, but this makes completion come up more
         -- often in unexpected places, so setting it to false _could_ help.
-        -- show_on_trigger_character = false
+        -- show_on_trigger_character = false.
 
         -- Prevent commas from triggering completion.
         -- I rarely need this behavior, and I can manually C-Space.
@@ -21,7 +21,7 @@ return {
         -- While this isn't as convenient as "preselect", this reduces the
         -- amount of unwanted accidental completions when pressing the enter
         -- key while the completion menu happens to be showing.
-        selection = "preselect"
+        -- selection = "manual"
       }
     }
   }
