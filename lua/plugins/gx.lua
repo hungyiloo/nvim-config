@@ -8,8 +8,8 @@ return {
   end,
   dependencies = { "nvim-lua/plenary.nvim" },
   opts = {
-    open_browser_app = "powershell.exe",
-    open_browser_args = { "start" }
+    open_browser_app = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    open_browser_args = { }
   },
   config = true, -- default settings
 }
