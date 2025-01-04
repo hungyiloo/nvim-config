@@ -1,24 +1,15 @@
 return {
-  -- This plugin doesn't really fit my workflow.
-  -- Issues include:
-  --   - fixed environment variables on neovim startup; cannot be changed without restarting neovim
-  --   - reliance on ftplugin for shortcuts, which is super flaky
-  --   - doesn't support named requests (i.e. anything after ### separators will break it)
-  --   - runs on neovim startup and sets up all its stuff, whether I'm in HTTP files or not
-  -- {
-  --   "mistweaverco/kulala.nvim",
-  --   config = true,
-  -- },
-  -- But I'm keeping the below treesitter setup for http files, just for syntax highlighting
-  {
+  "rest-nvim/rest.nvim",
+  ft = "http",
+  cmd = "Rest",
+  dependencies = {
     "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      vim.filetype.add({
-        extension = {
-          http = "http",
-        },
-      })
-      vim.list_extend(opts.ensure_installed, { "http" })
+    opts = function (_, opts)
+      opts.ensure_installed = opts.ensure_installed or {}
+      table.insert(opts.ensure_installed, "http")
     end,
   },
+  keys = {
+    { "<C-c><C-c>", "<cmd>Rest run<cr>", ft = "http", silent = true }
+  }
 }
