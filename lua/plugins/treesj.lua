@@ -7,5 +7,4 @@ return {
   opts = {
     max_join_length = 1024,
   },
-  config = true,
 }
