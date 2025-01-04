@@ -21,6 +21,12 @@ vim.g.neovide_text_contrast = 0.1
 -- vim.g.neovide_text_gamma = 1.2
 -- vim.g.neovide_text_contrast = 0.5
 
+-- custom Windows titlebar color to match catppuccin
+vim.g.neovide_title_background_color = "#1e1e2e"
+
+-- enable rounded corners on floating windows
+vim.g.neovide_floating_corner_radius = 0.25
+
 -- show a more useful window title
 vim.o.title = true
 vim.o.titlestring = '%{empty(expand("%:t")) ? "Neovim" : expand("%:t") . " - " . expand("%:~:h") . " - Neovim"}'
