@@ -11,6 +11,9 @@ return {
     },
     oldfiles = {
       formatter = "path.filename_first"
+    },
+    buffers = {
+      formatter = "path.filename_first"
     }
   }
 }
