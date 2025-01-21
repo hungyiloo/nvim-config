@@ -4,7 +4,7 @@ return {
   --- @type blink.cmp.ConfigStrict
   opts = {
     keymap = {
-      preset = "super-tab",
+      -- preset = "super-tab",
     },
     completion = {
       trigger = {
