@@ -12,7 +12,7 @@
   "emoji.nvim": { "branch": "main", "commit": "7643d40224ff07df1122df6430302fdbd1510be9" },
   "flash.nvim": { "branch": "main", "commit": "34c7be146a91fec3555c33fe89c7d643f6ef5cf1" },
   "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
-  "fzf-lua": { "branch": "main", "commit": "ff10649d80ba5f518bd66cb1e36e67d2632d0349" },
+  "fzf-lua": { "branch": "main", "commit": "29e2909e576258c0502b27efd865ad054362fdd9" },
   "git-conflict.nvim": { "branch": "main", "commit": "4bbfdd92d547d2862a75b4e80afaf30e73f7bbb4" },
   "gitsigns.nvim": { "branch": "main", "commit": "3ec5fbd9202ae3908551c98c4b6c3c05ff7c8e96" },
   "grug-far.nvim": { "branch": "main", "commit": "8e8f3429038d45a6d4144c0642d92f470e5480f3" },
