@@ -6,10 +6,10 @@
 vim.g.neovide_cursor_vfx_mode = "railgun"
 
 -- more comfy spacing between lines
-vim.opt.linespace = 2
+-- vim.opt.linespace = 2
 
 -- shadows for floating windows sometimes make overlays look janky
--- vim.g.neovide_floating_shadow = false
+vim.g.neovide_floating_shadow = false
 
 -- adjust font rendering, especially important for low DPI displays
 vim.g.neovide_text_gamma = 0.9
@@ -22,7 +22,7 @@ vim.g.neovide_text_contrast = 0.1
 -- vim.g.neovide_text_contrast = 0.5
 
 -- custom Windows titlebar color to match catppuccin
-vim.g.neovide_title_background_color = "#1e1e2e"
+vim.g.neovide_title_background_color = "#1a2128"
 
 -- enable rounded corners on floating windows
 vim.g.neovide_floating_corner_radius = 0.25
