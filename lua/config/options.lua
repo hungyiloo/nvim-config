@@ -21,9 +21,6 @@ vim.g.neovide_text_contrast = 0.1
 -- vim.g.neovide_text_gamma = 1.2
 -- vim.g.neovide_text_contrast = 0.5
 
--- custom Windows titlebar color to match catppuccin
-vim.g.neovide_title_background_color = "#131a21"
-
 -- enable rounded corners on floating windows
 vim.g.neovide_floating_corner_radius = 0.25
 
@@ -34,16 +31,6 @@ vim.o.titlestring = '%{empty(expand("%:t")) ? "Neovim" : expand("%:t") . " - " .
 -- disable autoformatting on save on startup
 -- (but this can be enabled by <leader>uf)
 vim.g.autoformat = false
-
--- always use pwsh as the shell
--- vim.opt.shell = 'pwsh'
-
--- NOTE: currently trying out default LazyVim pwsh config instead of the below
--- 
--- using pwsh needs a shell command flag set
--- https://github.com/neovim/neovim/issues/13893
--- vim.opt.shellcmdflag = '-nologo -noprofile -ExecutionPolicy RemoteSigned -command'
--- vim.opt.shellxquote = ''
 
 -- Disable all snacks animations
 vim.g.snacks_animate = false
