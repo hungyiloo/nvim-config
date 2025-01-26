@@ -1,3 +1,19 @@
+local pokemon = {
+  { name = "pikachu bulbasaur charmander squirtle", indent = 7, height = 11 },
+  { name = "pikachu chikorita cyndaquil totodile", indent = 11, height = 11 },
+  { name = "pikachu pidgey caterpie rattata", indent = 12, height = 11 },
+  { name = "jigglypuff snorlax", indent = 22, height = 20 },
+  { name = "chansey blissey", indent = 26, height = 17 },
+  { name = "eevee cubone vulpix clefairy", indent = 12, height = 11 },
+  { name = "jolteon flareon vaporeon", indent = 0, height = 17 },
+  { name = "dratini dragonair dragonite", indent = 10, height = 20 },
+  { name = "mew", indent = 40, height = 14 },
+  -- { name = "abra kadabra alakazam ", indent = 5, height = 20 },
+  -- { name = "gastly haunter gengar", indent = 7, height = 20 },
+  -- { name = "bulbasaur ivysaur venusaur", indent = 8, height = 20 },
+  -- { name = "charmander charmeleon charizard", indent = 5, height = 20 },
+  -- { name = "squirtle wartortle blastoise", indent = 10, height = 20 },
+}
 
 return {
   "folke/snacks.nvim",
@@ -15,6 +31,13 @@ return {
       pattern = "SnacksDashboardClosed",
       callback = function()
         vim.g.snacks_dashboard_open = false
+
+        -- refresh random pokemon on dashboard
+        math.randomseed(os.time())
+        local p = pokemon[math.random(#pokemon)]
+        Snacks.config.dashboard.sections[1].cmd = "pokeget --hide-name " .. p.name
+        Snacks.config.dashboard.sections[1].indent = p.indent
+        Snacks.config.dashboard.sections[1].height = p.height
       end,
     })
   end,
@@ -47,22 +70,6 @@ return {
 
     opts.dashboard.width = 100
 
-    local pokemon = {
-      { name = "pikachu bulbasaur charmander squirtle", indent = 7, height = 11 },
-      { name = "pikachu chikorita cyndaquil totodile", indent = 11, height = 11 },
-      { name = "pikachu pidgey caterpie rattata", indent = 12, height = 11 },
-      { name = "jigglypuff snorlax", indent = 22, height = 20 },
-      { name = "chansey blissey", indent = 26, height = 17 },
-      { name = "eevee cubone vulpix clefairy", indent = 12, height = 11 },
-      { name = "jolteon flareon vaporeon", indent = 0, height = 17 },
-      { name = "dratini dragonair dragonite", indent = 10, height = 20 },
-      { name = "mew", indent = 40, height = 14 },
-      -- { name = "abra kadabra alakazam ", indent = 5, height = 20 },
-      -- { name = "gastly haunter gengar", indent = 7, height = 20 },
-      -- { name = "bulbasaur ivysaur venusaur", indent = 8, height = 20 },
-      -- { name = "charmander charmeleon charizard", indent = 5, height = 20 },
-      -- { name = "squirtle wartortle blastoise", indent = 10, height = 20 },
-    }
     math.randomseed(os.time())
     local p = pokemon[math.random(#pokemon)]
     table.insert(opts.dashboard.sections, 1, {
