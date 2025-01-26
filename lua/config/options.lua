@@ -22,7 +22,7 @@ vim.g.neovide_text_contrast = 0.1
 -- vim.g.neovide_text_contrast = 0.5
 
 -- custom Windows titlebar color to match catppuccin
-vim.g.neovide_title_background_color = "#1a2128"
+vim.g.neovide_title_background_color = "#131a21"
 
 -- enable rounded corners on floating windows
 vim.g.neovide_floating_corner_radius = 0.25

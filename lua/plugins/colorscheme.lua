@@ -59,10 +59,19 @@ return {
     lazy = false,
     opts = function(_, opts)
       opts.color_overrides = {
+        -- B.Y.O. colors from PastelDark, but merged into catppuccin to take
+        -- advantage of its *excellent* ecosystem support. Basically I'm using
+        -- catppuccin, but with a custom color palette. Not all catppuccin
+        -- colors are remapped, because catppuccin uses a wider palette than
+        -- Base46 does. I find it valuable to retain some of catppuccin's
+        -- esoteric colors like flamingo/rosewater/sapphire.
         mocha = {
-          crust = PastelDark.base_30.darker_black,
-          mantle = PastelDark.base_30.black,
-          base = PastelDark.base_30.black2,
+          crust = "#0c1217", -- darker than darker_black
+          mantle = PastelDark.base_30.darker_black,
+          base = PastelDark.base_30.black,
+          -- lighter background variant
+          -- mantle = PastelDark.base_30.black,
+          -- base = PastelDark.base_30.black2,
           surface0 = PastelDark.base_30.one_bg,
           surface1 = PastelDark.base_30.one_bg2,
           surface2 = PastelDark.base_30.one_bg3,
@@ -79,35 +88,23 @@ return {
           peach = PastelDark.base_30.orange,
           red = PastelDark.base_30.red,
           mauve = PastelDark.base_30.dark_purple,
-          pink = PastelDark.base_30.pink,
-          flamingo = PastelDark.base_16.base0F,
+          pink = PastelDark.base_30.baby_pink,
         }
       }
       opts.custom_highlights = function(colors)
         return {
-          -- HACK: Recent updates seem to make visual selections and LSP
-          --       reference highlights indistinguishable, so this override
-          --       fixes it, temporarily. Maybe try reverting this change
-          --       in the future if a fix is put in upstream?
-          LspReferenceText = { bg = colors.surface0 }, -- originally surface1
-          LspReferenceRead = { bg = colors.surface0 },
-          LspReferenceWrite = { bg = colors.surface0 },
-
-          -- custom highlights for markdown backgrounds
           RenderMarkdownH1Bg = { bg = "#301b21" },
           RenderMarkdownH2Bg = { bg = "#32231b" },
           RenderMarkdownH3Bg = { bg = "#312d23" },
           RenderMarkdownH4Bg = { bg = "#212d20" },
           RenderMarkdownH5Bg = { bg = "#17272f" },
           RenderMarkdownH6Bg = { bg = "#1f2447" },
-          RenderMarkdownCode = { bg = "#181926" },
-          RenderMarkdownCodeInline = { bg = "#181926" },
+          RenderMarkdownCode = { bg = PastelDark.base_30.darker_black },
+          RenderMarkdownCodeInline = { bg = PastelDark.base_30.darker_black },
 
-          -- custom highlights for snacks.indent and snacks.dim
-          SnacksIndent = { fg = "#272839"},
-          SnacksDim = { fg = colors.surface2 },
+          SnacksIndent = { fg = PastelDark.base_30.black2 }, -- indent guidelines
+          SnacksDim = { fg = colors.surface2 }, -- dimmed text color
 
-          -- custom highlights for fzf-lua
           FzfLuaDirPart = { fg = colors.surface2 }
         }
       end
@@ -117,11 +114,6 @@ return {
       opts.fzf = true
     end,
   },
-  -- {
-  --   "folke/tokyonight.nvim",
-  --   lazy = false,
-  --   opts = { style = "moon" },
-  -- },
   {
     "LazyVim/LazyVim",
     opts = {
