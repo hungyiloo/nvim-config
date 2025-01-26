@@ -15,9 +15,10 @@ vim.keymap.set("n", "<leader>;", ":", { noremap = true, silent = false, desc = "
 
 -- A shortcut to close all buffers and "reset" the visual layout
 vim.keymap.set("n", "<leader>bx", function()
-  vim.cmd("%bd")
-  Snacks.dashboard.open({ win = 0, buf = 0 })
+  vim.cmd("tabnew")
+  vim.cmd("tabonly")
   vim.cmd("silent only")
+  Snacks.dashboard.open({ win = 0, buf = 0 })
 end, { noremap = true, silent = true, desc = "Close all buffers" })
 
 -- No need for ]<space> and [<space keymaps for inserting blank lines anymore
@@ -65,7 +66,15 @@ vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true, desc = "Delete Last Wor
 vim.keymap.set("n", "<leader><tab><tab>", "<cmd>FzfLua tabs<cr>", { desc = "Switch Tabs" })
 vim.keymap.set("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
 vim.keymap.set("n", "<leader><tab>f", "<cmd>tabfirst<cr>", { desc = "First Tab" })
-vim.keymap.set("n", "<leader><tab>n", "<cmd>tabnew<cr>", { desc = "New Tab" })
+vim.keymap.set(
+  "n",
+  "<leader><tab>n",
+  function ()
+    vim.cmd("tabnew")
+    Snacks.dashboard.open({ win = 0, buf = 0 })
+  end,
+  { desc = "New Tab" }
+)
 vim.keymap.set("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 -- vim.keymap.set("n", "<leader><tab>d", function()
 --   vim.cmd("windo bd")
