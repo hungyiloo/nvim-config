@@ -66,12 +66,16 @@ return {
         -- Base46 does. I find it valuable to retain some of catppuccin's
         -- esoteric colors like flamingo/rosewater/sapphire.
         mocha = {
-          crust = "#0c1217", -- darker than darker_black
-          mantle = PastelDark.base_30.darker_black,
-          base = PastelDark.base_30.black,
-          -- lighter background variant
-          -- mantle = PastelDark.base_30.black,
-          -- base = PastelDark.base_30.black2,
+          -- original variant
+          -- crust = "#0c1217", -- darker than darker_black
+          -- mantle = PastelDark.base_30.darker_black,
+          -- base = PastelDark.base_30.black,
+
+          -- softer variant
+          crust = PastelDark.base_30.darker_black,
+          mantle = PastelDark.base_30.black,
+          base = PastelDark.base_30.black2,
+
           surface0 = PastelDark.base_30.one_bg,
           surface1 = PastelDark.base_30.one_bg2,
           surface2 = PastelDark.base_30.one_bg3,
@@ -89,9 +93,12 @@ return {
           red = PastelDark.base_30.red,
           mauve = PastelDark.base_30.dark_purple,
           pink = PastelDark.base_30.baby_pink,
-        }
+        },
       }
       opts.custom_highlights = function(colors)
+        -- custom Windows titlebar color to match the colorscheme
+        vim.g.neovide_title_background_color = colors.base
+
         return {
           RenderMarkdownH1Bg = { bg = "#301b21" },
           RenderMarkdownH2Bg = { bg = "#32231b" },
@@ -105,7 +112,7 @@ return {
           SnacksIndent = { fg = PastelDark.base_30.black2 }, -- indent guidelines
           SnacksDim = { fg = colors.surface2 }, -- dimmed text color
 
-          FzfLuaDirPart = { fg = colors.surface2 }
+          FzfLuaDirPart = { fg = colors.surface2 },
         }
       end
       opts.transparent_background = not vim.g.neovide
@@ -121,4 +128,3 @@ return {
     },
   },
 }
-
