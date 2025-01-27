@@ -58,6 +58,10 @@ return {
     name = "catppuccin",
     lazy = false,
     opts = function(_, opts)
+      opts.transparent_background = not vim.g.neovide
+      opts.snacks = true
+      opts.term_colors = true
+      opts.fzf = true
       opts.color_overrides = {
         -- B.Y.O. colors from PastelDark, but merged into catppuccin to take
         -- advantage of its *excellent* ecosystem support. Basically I'm using
@@ -99,7 +103,7 @@ return {
         -- custom Windows titlebar color to match the colorscheme
         vim.g.neovide_title_background_color = colors.base
 
-        return {
+        local my_highlights = {
           RenderMarkdownH1Bg = { bg = "#301b21" },
           RenderMarkdownH2Bg = { bg = "#32231b" },
           RenderMarkdownH3Bg = { bg = "#312d23" },
@@ -114,11 +118,14 @@ return {
 
           FzfLuaDirPart = { fg = colors.surface2 },
         }
+
+        -- No cursor line if we're running in terminal with transparent_mode
+        if not vim.g.neovide and opts.transparent_background then
+          my_highlights.CursorLine = { bg = "none" }
+        end
+
+        return my_highlights
       end
-      opts.transparent_background = not vim.g.neovide
-      opts.snacks = true
-      opts.term_colors = true
-      opts.fzf = true
     end,
   },
   {
