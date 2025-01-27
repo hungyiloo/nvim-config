@@ -4,24 +4,24 @@ return {
   --- @type blink.cmp.ConfigStrict
   opts = {
     keymap = {
-      -- preset = "super-tab",
+      preset = "enter",
+
+      -- Extra tweaks to make it behave as close to vscode as possible.
+      -- This helps with muscle memory.
+      ['<Tab>'] = {
+        function(cmp)
+          if cmp.snippet_active() then return cmp.accept()
+          else return cmp.select_and_accept() end
+        end,
+        'snippet_forward',
+        'fallback'
+      },
     },
     completion = {
-      trigger = {
-        -- By default this is true, but this makes completion come up more
-        -- often in unexpected places, so setting it to false _could_ help.
-        -- show_on_trigger_character = false.
-
-        -- Prevent commas from triggering completion.
-        -- I rarely need this behavior, and I can manually C-Space.
-        -- show_on_insert_on_trigger_character = false,
-        -- show_on_blocked_trigger_characters = { ' ', '\n', '\t', ',' },
-      },
       list = {
-        -- While this isn't as convenient as "preselect", this reduces the
-        -- amount of unwanted accidental completions when pressing the enter
-        -- key while the completion menu happens to be showing.
-        -- selection = "manual"
+        selection = {
+          auto_insert = false
+        }
       }
     }
   }
