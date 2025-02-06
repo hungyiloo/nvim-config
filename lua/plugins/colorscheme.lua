@@ -61,7 +61,6 @@ return {
       opts.transparent_background = not vim.g.neovide
       opts.snacks = true
       opts.term_colors = true
-      opts.fzf = true
       opts.color_overrides = {
         -- B.Y.O. colors from PastelDark, but merged into catppuccin to take
         -- advantage of its *excellent* ecosystem support. Basically I'm using
@@ -90,8 +89,7 @@ return {
           text = PastelDark.base_16.base05,
           blue = PastelDark.base_16.blue,
           cyan = PastelDark.base_30.cyan,
-          teal = PastelDark.base_16.base0B,
-          green = PastelDark.base_30.vibrant_green,
+          teal = PastelDark.base_16.teal,
           yellow = PastelDark.base_30.sun,
           peach = PastelDark.base_30.orange,
           red = PastelDark.base_30.red,
@@ -110,13 +108,11 @@ return {
           RenderMarkdownH4Bg = { bg = "#212d20" },
           RenderMarkdownH5Bg = { bg = "#17272f" },
           RenderMarkdownH6Bg = { bg = "#1f2447" },
-          RenderMarkdownCode = { bg = PastelDark.base_30.darker_black },
-          RenderMarkdownCodeInline = { bg = PastelDark.base_30.darker_black },
+          RenderMarkdownCode = { bg = colors.crust },
+          RenderMarkdownCodeInline = { bg = colors.crust },
 
-          SnacksIndent = { fg = PastelDark.base_30.black2 }, -- indent guidelines
+          SnacksIndent = { fg = colors.surface0 }, -- indent guidelines
           SnacksDim = { fg = colors.surface2 }, -- dimmed text color
-
-          FzfLuaDirPart = { fg = colors.surface2 },
         }
 
         -- No cursor line if we're running in terminal with transparent_mode

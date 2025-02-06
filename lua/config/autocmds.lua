@@ -3,11 +3,10 @@
 -- Add any additional autocmds here
 
 -- disable cursor animations in terminal buffers, as they flicker a lot
--- disable cursor animations in fzf windows, as they flicker a lot
 vim.api.nvim_create_autocmd({"BufEnter", "WinNew"}, {
   callback = function()
     vim.schedule(function ()
-      if vim.bo.buftype ~= "terminal" and vim.bo.filetype ~= "fzf" then
+      if vim.bo.buftype ~= "terminal" then
         vim.g.neovide_cursor_animation_length = 0.05
         vim.g.neovide_cursor_vfx_mode = "railgun"
       else

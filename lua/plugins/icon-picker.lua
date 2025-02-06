@@ -38,12 +38,14 @@ return {
     }
   },
   {
-    "2kabhishek/nerdy.nvim",
+    "folke/snacks.nvim",
     keys = {
       {
         mode = { "n" },
         "<leader>ii",
-        "<cmd>Nerdy<cr>",
+        function ()
+          Snacks.picker('icons', { icon_sources = { "nerd_fonts" }})
+        end,
         desc = "Insert Icon",
         noremap = true,
         silent = true,
@@ -51,21 +53,18 @@ return {
     }
   },
   {
-    "allaman/emoji.nvim",
-    cmd = "Emoji",
+    "folke/snacks.nvim",
     keys = {
       {
         mode = { "n" },
         "<leader>ie",
-        "<cmd>Emoji insert<cr>",
+        function ()
+          Snacks.picker('icons', { icon_sources = { "emoji" }})
+        end,
         desc = "Insert Emoji",
         noremap = true,
         silent = true,
       },
     },
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    config = true
   }
 }

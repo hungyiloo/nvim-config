@@ -63,7 +63,7 @@ vim.keymap.set("n", "<leader>ps", ":wa<cr>", { noremap = true, silent = true, de
 vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true, desc = "Delete Last Word" })
 
 -- Use tabs like workspaces
-vim.keymap.set("n", "<leader><tab><tab>", "<cmd>FzfLua tabs<cr>", { desc = "Switch Tabs" })
+vim.keymap.set("n", "<leader><tab><tab>", "<cmd>tabs<cr>", { desc = "Show Tabs" })
 vim.keymap.set("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
 vim.keymap.set("n", "<leader><tab>f", "<cmd>tabfirst<cr>", { desc = "First Tab" })
 vim.keymap.set(

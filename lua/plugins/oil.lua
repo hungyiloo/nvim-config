@@ -6,9 +6,9 @@ return {
   opts = {
     keymaps = {
       -- I use <C-p> to go up one line (muscle memory from emacs)
-      -- So use <F4> to toggle the preview instead, which is consistent with fzf-lua
+      -- So use <M-p> to toggle the preview instead, which is consistent with snacks pickers
       ["<C-p>"] = false,
-      ["<F4>"] = "actions.preview",
+      ["<M-p>"] = "actions.preview",
 
       -- Allow "q" for quit but also use <F3> as a stand in for "q" macro recording
       -- in the odd case that it's necessary
