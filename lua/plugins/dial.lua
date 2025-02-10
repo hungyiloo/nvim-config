@@ -1,5 +1,4 @@
 return {
-  { import = "lazyvim.plugins.extras.editor.dial" },
   {
     "monaqa/dial.nvim",
     opts = function(_, opts)

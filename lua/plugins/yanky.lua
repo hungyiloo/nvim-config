@@ -1,5 +1,4 @@
 return {
-  { import = "lazyvim.plugins.extras.coding.yanky" },
   {
     "gbprod/yanky.nvim",
     keys = {

@@ -1,5 +1,4 @@
 return {
-  { import = "lazyvim.plugins.extras.lang.angular" },
   {
     "stevearc/conform.nvim",
     optional = true,
@@ -16,8 +15,8 @@ return {
       --       (This is my own fork of the angular treesitter parser)
       --       This coincidentally fixes inconsistent behavior in nvim-ts-autotag in htmlangular templates
       parser_config.angular.install_info.url = "https://github.com/hungyiloo/tree-sitter-angular"
-      parser_config.angular.install_info.branch = "fix-style-binding-percent-unit"
-      parser_config.angular.install_info.revision = "cac3997122a19ad5dc95be021070a4bf88fb7238"
+      parser_config.angular.install_info.branch = "custom-fixes"
+      parser_config.angular.install_info.revision = "4e584e834b6fad8439d6996235c279545d0ca9dc"
     end
   }
 }

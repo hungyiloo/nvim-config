@@ -1,6 +1,4 @@
 return {
-  { import = "lazyvim.plugins.extras.lang.omnisharp" },
-  --
   -- replace omnisharp with csharp-ls
   { "Hoffs/omnisharp-extended-lsp.nvim", enabled = false },
   { "Decodetalkers/csharpls-extended-lsp.nvim", lazy = true },
