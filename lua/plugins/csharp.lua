@@ -47,15 +47,14 @@ return {
         },
       }
 
+      -- NOTE: Ensure indents.scm is manually installed into nvim-treesitter's queries folder
+      -- https://gist.github.com/hungyiloo/66502e824814903e42b72f17d0b1218e
+
       vim.api.nvim_create_autocmd("FileType", {
         pattern = "cs",
         callback = function()
-          vim.cmd([[set shiftwidth=4]])
-          vim.cmd([[set tabstop=4]])
-          vim.cmd([[set nocindent]])
-          vim.cmd([[set autoindent]])
-          vim.cmd([[set smartindent]])
-          vim.cmd([[set indentexpr=]])
+          vim.cmd([[setlocal shiftwidth=4]])
+          vim.cmd([[setlocal tabstop=4]])
         end
       })
     end
