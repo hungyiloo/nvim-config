@@ -1,5 +1,5 @@
 -- PastelDark from NvChad Base46
-local PastelDark = {
+local Base46 = {
   base_30 = {
     white = "#b5bcc9",
     darker_black = "#10171e",
@@ -75,26 +75,26 @@ return {
           -- base = PastelDark.base_30.black,
 
           -- softer variant
-          crust = PastelDark.base_30.darker_black,
-          mantle = PastelDark.base_30.black,
-          base = PastelDark.base_30.black2,
+          crust = Base46.base_30.darker_black,
+          mantle = Base46.base_30.black,
+          base = Base46.base_30.black2,
 
-          surface0 = PastelDark.base_30.one_bg,
-          surface1 = PastelDark.base_30.one_bg2,
-          surface2 = PastelDark.base_30.one_bg3,
-          overlay0 = PastelDark.base_30.grey,
-          overlay1 = PastelDark.base_30.grey_fg,
-          overlay2 = PastelDark.base_30.grey_fg2,
-          subtext = PastelDark.base_16.base07,
-          text = PastelDark.base_16.base05,
-          blue = PastelDark.base_16.blue,
-          cyan = PastelDark.base_30.cyan,
-          teal = PastelDark.base_16.teal,
-          yellow = PastelDark.base_30.sun,
-          peach = PastelDark.base_30.orange,
-          red = PastelDark.base_30.red,
-          mauve = PastelDark.base_30.dark_purple,
-          pink = PastelDark.base_30.baby_pink,
+          surface0 = Base46.base_30.one_bg,
+          surface1 = Base46.base_30.one_bg2,
+          surface2 = Base46.base_30.one_bg3,
+          overlay0 = Base46.base_30.grey,
+          overlay1 = Base46.base_30.grey_fg,
+          overlay2 = Base46.base_30.grey_fg2,
+          subtext = Base46.base_16.base07,
+          text = Base46.base_16.base05,
+          blue = Base46.base_16.blue,
+          cyan = Base46.base_30.cyan,
+          teal = Base46.base_16.teal,
+          yellow = Base46.base_30.sun,
+          peach = Base46.base_30.orange,
+          red = Base46.base_30.red,
+          mauve = Base46.base_30.dark_purple,
+          pink = Base46.base_30.baby_pink,
         },
       }
       opts.custom_highlights = function(colors)
@@ -111,7 +111,6 @@ return {
           RenderMarkdownCode = { bg = colors.crust },
           RenderMarkdownCodeInline = { bg = colors.crust },
 
-          SnacksIndent = { fg = colors.surface0 }, -- indent guidelines
           SnacksDim = { fg = colors.surface2 }, -- dimmed text color
         }
 
