@@ -19,6 +19,19 @@ return {
   -- Optional dependencies
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
-    { "<leader>.", mode = "n", "<cmd>Oil --float<cr>", desc = "Directory Editor", silent = true, noremap = true },
+    {
+      "<leader>.",
+      mode = "n",
+      function ()
+        local current_file_name = vim.fn.expand('%:p:t')
+        require("oil").open_float(nil, nil, function ()
+          -- Put cursor on the current file
+          vim.fn.search(current_file_name)
+        end)
+      end,
+      desc = "Directory Editor",
+      silent = true,
+      noremap = true,
+    },
   },
 }
