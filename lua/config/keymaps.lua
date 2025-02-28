@@ -122,14 +122,14 @@ vim.keymap.set("n", "<C-=>", function()
   if not vim.g.neovide_scale_factor then
     vim.g.neovide_scale_factor = 1
   end
-  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.05
+  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + (10.9/10.2 - 1)
   vim.cmd([[redraw!]])
 end, { desc = "Zoom In" })
 vim.keymap.set("n", "<C-->", function()
   if not vim.g.neovide_scale_factor then
     vim.g.neovide_scale_factor = 1
   end
-  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.05
+  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - (10.9/10.2 - 1)
   vim.cmd([[redraw!]])
 end, { desc = "Zoom Out" })
 vim.keymap.set("n", "<C-0>", function()
