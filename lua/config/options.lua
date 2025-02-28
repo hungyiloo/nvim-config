@@ -11,6 +11,11 @@ vim.g.neovide_cursor_vfx_mode = "railgun"
 -- shadows for floating windows sometimes make overlays look janky
 vim.g.neovide_floating_shadow = false
 
+-- acrylic blur in Windows
+-- vim.g.neovide_window_blurred = true
+-- vim.g.neovide_transparency = 0.5
+-- vim.g.neovide_normal_opacity = 0.5
+
 -- adjust font rendering, especially important for low DPI displays
 vim.g.neovide_text_gamma = 0.9
 vim.g.neovide_text_contrast = 0.1
