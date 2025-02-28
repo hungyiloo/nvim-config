@@ -112,6 +112,17 @@ return {
           RenderMarkdownCodeInline = { bg = colors.crust },
 
           SnacksDim = { fg = colors.surface2 }, -- dimmed text color
+
+          -- better looking floats
+          NormalFloat = { bg = opts.transparent_background and "none" or colors.base },
+
+          -- experimental snacks picker styling
+          SnacksPickerBorder = { fg = colors.surface1 },
+          SnacksPickerTitle = { fg = colors.crust, bg = colors.teal },
+          SnacksPickerBoxTitle = { fg = colors.crust, bg = colors.peach },
+          -- SnacksPickerInput = { bg = colors.crust },
+          SnacksPickerInputTitle = { fg = colors.crust, bg = colors.mauve },
+          SnacksPickerInputBorder = { fg = colors.surface0 },
         }
 
         -- No cursor line if we're running in terminal with transparent_mode
