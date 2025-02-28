@@ -56,7 +56,7 @@ return {
       { icon = " ", key = "r", desc = "Project Recent Files (cwd)", action = pick('oldfiles', { filter = { cwd = true } }) },
       { icon = " ", key = "R", desc = "All Recent Files", action = pick('oldfiles') },
       { icon = " ", key = "p", desc = "Projects", action = ":CdProject", },
-      { icon = " ", key = "g", desc = "Lazygit", action = ":lua Snacks.lazygit()" },
+      { icon = " ", key = "g", desc = "Lazygit", action = ":lua Snacks.lazygit({ cwd = LazyVim.root.git() })" },
       { icon = " ", key = "c", desc = "Config", action = pick('files', {cwd = vim.fn.stdpath('config')}) },
       -- { icon = " ", key = "s", desc = "Restore Session", section = "session" },
       { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
