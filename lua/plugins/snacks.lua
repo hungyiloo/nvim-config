@@ -9,6 +9,11 @@ return {
   ---@type snacks.Config
   opts = {
     picker = {
+      layout = {
+        layout = {
+          backdrop = 60
+        }
+      },
       formatters = {
         file = {
           filename_first = true,
