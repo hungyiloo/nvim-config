@@ -1,6 +1,7 @@
 return {
   {
     "chrisbra/unicode.vim",
+    cmd = { "UnicodeName", "UnicodeTable" },
     keys = {
       {
         mode = { "n" },
