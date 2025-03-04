@@ -1,12 +1,5 @@
 return {
   {
-    "stevearc/conform.nvim",
-    optional = true,
-    opts = function(_, opts)
-      opts.formatters_by_ft["angular"] = { "prettier" }
-    end,
-  },
-  {
     "nvim-treesitter/nvim-treesitter",
     opts = function()
       local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
