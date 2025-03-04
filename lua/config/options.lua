@@ -11,6 +11,10 @@ vim.g.neovide_cursor_vfx_mode = "railgun"
 -- shadows for floating windows sometimes make overlays look janky
 vim.g.neovide_floating_shadow = false
 
+-- custom Windows titlebar color to match the colorscheme
+vim.g.neovide_title_background_color = '#1a2128'
+
+
 -- acrylic blur in Windows
 -- vim.g.neovide_window_blurred = true
 -- vim.g.neovide_transparency = 0.5

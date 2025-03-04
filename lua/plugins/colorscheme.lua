@@ -98,9 +98,6 @@ return {
         },
       }
       opts.custom_highlights = function(colors)
-        -- custom Windows titlebar color to match the colorscheme
-        vim.g.neovide_title_background_color = colors.base
-
         local my_highlights = {
           RenderMarkdownH1Bg = { bg = "#301b21" },
           RenderMarkdownH2Bg = { bg = "#32231b" },
