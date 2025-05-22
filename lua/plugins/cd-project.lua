@@ -1,12 +1,15 @@
 return {
   "LintaoAmons/cd-project.nvim",
   lazy = true,
-  cmd = { "CdProject", "CdProjectTab", "CdProjectAdd", "CdProjectManualAdd", "CdProjectBack", "CdProjectSearchAndAdd" },
+  cmd = { "CdProject", "CdProjectAdd", "CdProjectManualAdd", "CdProjectBack", "CdProjectSearchAndAdd" },
   keys = {
     {
       mode = { "n" },
       "<leader>pp",
-      ":CdProjectTab<cr>",
+      function()
+        require("cd-project").api.cd_project_in_tab = function(path) require("cd-project").api.cd_project(path, { cd_cmd = "tabe | tcd" }) end
+        require("cd-project/adapter/vim-ui").cd_project_in_tab()
+      end,
       noremap = true,
       silent = true,
       desc = "Open Project (New Tab)",
