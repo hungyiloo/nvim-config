@@ -6,6 +6,10 @@ local wk = require("which-key")
 -- Add a familiar "save file" shortcut
 vim.keymap.set("n", "<leader>fs", ":w<CR>", { noremap = true, silent = true, desc = "Save File" })
 
+-- Invert the recent files mappings to prefer current project scope on "fr" and global on "fR"
+vim.keymap.set("n", "<leader>fR", function() Snacks.picker.recent() end, { desc = "Recent" })
+vim.keymap.set("n", "<leader>fr", function() Snacks.picker.recent({ filter = { cwd = true }}) end, { desc = "Recent (cwd)" })
+
 -- Add a familiar command running shortcut
 vim.keymap.set("n", "<leader>;", ":", { noremap = true, silent = false, desc = "Command" })
 
