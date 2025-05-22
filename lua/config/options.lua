@@ -6,7 +6,7 @@
 vim.g.neovide_cursor_vfx_mode = "railgun"
 
 -- more comfy spacing between lines
--- vim.opt.linespace = 2
+vim.opt.linespace = 1
 
 -- shadows for floating windows sometimes make overlays look janky
 vim.g.neovide_floating_shadow = false
@@ -14,11 +14,10 @@ vim.g.neovide_floating_shadow = false
 -- custom Windows titlebar color to match the colorscheme
 vim.g.neovide_title_background_color = '#1a2128'
 
-
 -- acrylic blur in Windows
--- vim.g.neovide_window_blurred = true
--- vim.g.neovide_transparency = 0.5
--- vim.g.neovide_normal_opacity = 0.5
+vim.g.neovide_window_blurred = true
+-- vim.g.neovide_opacity = 0.8
+-- vim.g.neovide_normal_opacity = 0.8
 
 -- adjust font rendering, especially important for low DPI displays
 vim.g.neovide_text_gamma = 0.9
