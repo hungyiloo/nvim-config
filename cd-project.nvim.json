@@ -1,62 +1,88 @@
-[
-  {
-    "name": "nvim",
-    "path": "D:\\appdata\\nvim"
-  },
-  {
-    "name": "soze.web",
-    "path": "D:\\work\\code\\soze.web"
-  },
-  {
-    "name": "soze.api",
-    "path": "D:\\work\\code\\soze.api"
-  },
-  {
-    "name": "ars",
-    "path": "D:\\work\\code\\ars"
-  },
-  {
-    "name": "genealogy",
-    "path": "D:\\work\\code\\genealogy"
-  },
-  {
-    "name": "obsidian",
-    "path": "C:\\Users\\hungy\\obsidian"
-  },
-  {
-    "name": "hungyi.net",
-    "path": "D:\\dev\\hungyi.net"
-  },
-  {
-    "name": "hearthmill",
-    "path": "D:\\dev\\hearthmill.nvim"
-  },
-  {
-    "name": "soze.arm",
-    "path": "D:\\work\\code\\soze.arm"
-  },
-  {
-    "name": "arrow.nvim",
-    "path": "D:\\dev\\arrow.nvim"
-  },
-  {
-    "name": "ldplus",
-    "path": "D:\\work\\code\\ldplus"
-  },
-  {
-    "name": "advent-of-code",
-    "path": "D:\\dev\\advent-of-code"
-  },
-  {
-    "name": "agitator.nvim",
-    "path": "D:\\dev\\agitator.nvim"
-  },
-  {
-    "name": "key-be-seen",
-    "path": "D:\\dev\\key-be-seen"
-  },
-  {
-    "name": "pwf moo-map",
-    "path": "D:\\dev\\pwf\\moo-map"
-  }
-]
+[
+  {
+    "last_file": "D:/appdata/nvim/lua/plugins/cd-project.lua",
+    "last_position": [
+      10,
+      30
+    ],
+    "name": "obsidian",
+    "path": "C:\\Users\\hungy\\obsidian",
+    "visited_at": 1747886451
+  },
+  {
+    "last_file": "src\\app\\snapshots\\create-snapshot.component.ts",
+    "last_position": [
+      103,
+      0
+    ],
+    "name": "soze.api",
+    "path": "D:\\work\\code\\soze.api",
+    "visited_at": 1747839274
+  },
+  {
+    "last_file": "src\\app\\snapshots\\create-snapshot.component.ts",
+    "last_position": [
+      159,
+      16
+    ],
+    "name": "soze.web",
+    "path": "D:\\work\\code\\soze.web",
+    "visited_at": 1747792454
+  },
+  {
+    "name": "nvim",
+    "path": "D:\\appdata\\nvim"
+  },
+  {
+    "name": "key-be-seen",
+    "path": "D:\\dev\\key-be-seen"
+  },
+  {
+    "name": "pwf moo-map",
+    "path": "D:\\dev\\pwf\\moo-map"
+  },
+  {
+    "name": "genealogy",
+    "path": "D:\\work\\code\\genealogy"
+  },
+  {
+    "name": "hungyi.net",
+    "path": "D:\\dev\\hungyi.net"
+  },
+  {
+    "name": "hearthmill",
+    "path": "D:\\dev\\hearthmill.nvim"
+  },
+  {
+    "name": "ldplus",
+    "path": "D:\\work\\code\\ldplus"
+  },
+  {
+    "name": "soze.arm",
+    "path": "D:\\work\\code\\soze.arm"
+  },
+  {
+    "name": "arrow.nvim",
+    "path": "D:\\dev\\arrow.nvim"
+  },
+  {
+    "name": "soze.opsreport",
+    "path": "D:\\work\\code\\soze.opsreport"
+  },
+  {
+    "name": "ars",
+    "path": "D:\\work\\code\\ars"
+  },
+  {
+    "name": "advent-of-code",
+    "path": "D:\\dev\\advent-of-code"
+  },
+  {
+    "name": "agitator.nvim",
+    "path": "D:\\dev\\agitator.nvim"
+  },
+  {
+    "name": "tree-sitter-angular",
+    "path": "D:\\dev\\tree-sitter-angular"
+  }
+]
