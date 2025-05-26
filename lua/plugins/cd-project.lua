@@ -42,6 +42,8 @@ return {
     choice_format = "both", -- optional, you can switch to "name" or "path"
     projects_picker = "vim-ui", -- optional, you can switch to `telescope`
     auto_register_project = false, -- optional, toggle on/off the auto add project behaviour
+    remember_project_position = false,
+
     -- do whatever you like by hooks
     hooks = {
       {
