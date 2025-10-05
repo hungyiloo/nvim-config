@@ -5,9 +5,13 @@ return {
     { "<leader>S",  false },
     { "<leader>bs",  function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
     { "<leader>bS",  function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
+    { "<leader>gb",  ":Gitsigns blame<cr>", desc = "Git blame", silent = true },
   },
   ---@type snacks.Config
   opts = {
+    scratch = {
+      ft = "markdown"
+    },
     picker = {
       layout = {
         layout = {
