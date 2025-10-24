@@ -3,7 +3,7 @@ return {
   { "Hoffs/omnisharp-extended-lsp.nvim", enabled = false },
   { "Decodetalkers/csharpls-extended-lsp.nvim", lazy = true },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = { ensure_installed = { "csharp-language-server" } },
   },
   {

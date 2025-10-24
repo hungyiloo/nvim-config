@@ -1,40 +1,46 @@
 [
   {
-    "name": "nvim",
-    "path": "D:\\appdata\\nvim",
-    "visited_at": 1759654887
+    "name": "soze.web",
+    "path": "D:\\work\\code\\soze.web",
+    "visited_at": 1761308188
   },
   {
-    "name": "hungyi.net",
-    "path": "D:\\dev\\hungyi.net",
-    "visited_at": 1759646989
+    "name": "nvim",
+    "path": "D:\\appdata\\nvim",
+    "visited_at": 1761304978
+  },
+  {
+    "id": "20250701192118_6061",
+    "name": "nvaider.nvim",
+    "path": "D:\\dev\\nvaider.nvim",
+    "visited_at": 1761304487
+  },
+  {
+    "name": "obsidian",
+    "path": "C:\\Users\\hungy\\obsidian",
+    "visited_at": 1761301293
+  },
+  {
+    "name": "soze.api",
+    "path": "D:\\work\\code\\soze.api",
+    "visited_at": 1761293176
   },
   {
     "id": "20250809104559_7199",
     "name": "kiara",
     "path": "D:\\dev\\kiara",
-    "visited_at": 1759570667
-  },
-  {
-    "name": "soze.api",
-    "path": "D:\\work\\code\\soze.api",
-    "visited_at": 1759373313
-  },
-  {
-    "name": "obsidian",
-    "path": "C:\\Users\\hungy\\obsidian",
-    "visited_at": 1759323051
-  },
-  {
-    "name": "soze.web",
-    "path": "D:\\work\\code\\soze.web",
-    "visited_at": 1759316786
+    "visited_at": 1761287206
   },
   {
     "id": "20250714133428_6015",
     "name": "pwf inventory",
     "path": "D:\\dev\\pwf\\pwf-inventory",
-    "visited_at": 1759141403
+    "visited_at": 1761146830
+  },
+  {
+    "name": "hungyi.net",
+    "path": "D:\\dev\\hungyi.net",
+    "visited_at": 1759646989
   },
   {
     "id": "20250910195941_8748",
@@ -51,12 +57,6 @@
     "name": "pwf moo-map",
     "path": "D:\\dev\\pwf\\moo-map",
     "visited_at": 1754316490
-  },
-  {
-    "id": "20250701192118_6061",
-    "name": "nvaider.nvim",
-    "path": "D:\\dev\\nvaider.nvim",
-    "visited_at": 1753622708
   },
   {
     "name": "hearthmill",
@@ -79,24 +79,24 @@
     "visited_at": 1751379096
   },
   {
-    "name": "advent-of-code",
-    "path": "D:\\dev\\advent-of-code"
+    "name": "genealogy",
+    "path": "D:\\work\\code\\genealogy"
   },
   {
     "name": "soze.arm",
     "path": "D:\\work\\code\\soze.arm"
   },
   {
-    "name": "genealogy",
-    "path": "D:\\work\\code\\genealogy"
-  },
-  {
-    "name": "key-be-seen",
-    "path": "D:\\dev\\key-be-seen"
+    "name": "advent-of-code",
+    "path": "D:\\dev\\advent-of-code"
   },
   {
     "name": "tree-sitter-angular",
     "path": "D:\\dev\\tree-sitter-angular"
+  },
+  {
+    "name": "key-be-seen",
+    "path": "D:\\dev\\key-be-seen"
   },
   {
     "name": "ars",
