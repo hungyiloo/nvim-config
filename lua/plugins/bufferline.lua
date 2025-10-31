@@ -3,7 +3,7 @@ return {
   opts = {
     options = {
       -- mode = "tabs",
-      separator_style = "slant",
+      -- separator_style = "slant",
       -- always_show_bufferline = true,
     },
   },

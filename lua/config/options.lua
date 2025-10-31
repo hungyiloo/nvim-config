@@ -12,7 +12,7 @@ vim.opt.linespace = 1
 vim.g.neovide_floating_shadow = false
 
 -- custom Windows titlebar color to match the colorscheme
-vim.g.neovide_title_background_color = '#1a2128'
+vim.g.neovide_title_background_color = '#24273a'
 
 -- acrylic blur in Windows
 vim.g.neovide_window_blurred = true
@@ -42,3 +42,6 @@ vim.g.autoformat = false
 
 -- Disable all snacks animations
 vim.g.snacks_animate = false
+
+-- Default rounded borders on (floating) windows
+vim.o.winborder = 'rounded'

@@ -11,7 +11,7 @@ return {
             install_info = {
               url = "https://github.com/hungyiloo/tree-sitter-angular",
               branch = "custom-fixes",
-              revision = "124bdc2adc184bdc1659fdc5d2afe581b35ef71f",
+              revision = "bad7ef343b3063792ed037f63e04a84319b9f5b8",
               files = { "src/parser.c" },  -- Explicit files (optional but robust)
             },
             tier = 4,
