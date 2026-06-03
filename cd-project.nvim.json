@@ -1,35 +1,75 @@
 [
   {
-    "id": "20250809104559_7199",
-    "name": "kiara",
-    "path": "D:\\dev\\kiara",
-    "visited_at": 1761913372
-  },
-  {
     "name": "soze.web",
     "path": "D:\\work\\code\\soze.web",
-    "visited_at": 1761806822
+    "visited_at": 1780484718
+  },
+  {
+    "id": "20260520092230_5204",
+    "name": "verge",
+    "path": "D:\\dev\\verge",
+    "visited_at": 1780484688
   },
   {
     "name": "soze.api",
     "path": "D:\\work\\code\\soze.api",
-    "visited_at": 1761709748
+    "visited_at": 1780049288
   },
   {
     "name": "obsidian",
     "path": "C:\\Users\\hungy\\obsidian",
-    "visited_at": 1761635937
+    "visited_at": 1779266553
+  },
+  {
+    "id": "20260415104317_2133",
+    "name": "claude",
+    "path": "C:\\Users\\hungy\\.claude",
+    "visited_at": 1778740284
+  },
+  {
+    "id": "20251121121831_7599",
+    "name": "soze.wiki",
+    "path": "D:\\work\\code\\soze.wiki",
+    "visited_at": 1778160763
+  },
+  {
+    "id": "20250714133428_6015",
+    "name": "pwf inventory",
+    "path": "D:\\dev\\pwf\\pwf-inventory",
+    "visited_at": 1776482210
   },
   {
     "id": "20250910195941_8748",
     "name": "pwf-www",
     "path": "D:\\dev\\pwf\\pwf-www",
-    "visited_at": 1761570205
+    "visited_at": 1771844586
+  },
+  {
+    "name": "soze.opsreport",
+    "path": "D:\\work\\code\\soze.opsreport",
+    "visited_at": 1767682212
+  },
+  {
+    "id": "20250809104559_7199",
+    "name": "kiara",
+    "path": "D:\\dev\\kiara",
+    "visited_at": 1766493561
+  },
+  {
+    "id": "20251115204814_7089",
+    "name": "hikari",
+    "path": "D:\\dev\\hikari",
+    "visited_at": 1763386761
+  },
+  {
+    "name": "hearthmill",
+    "path": "D:\\dev\\hearthmill.nvim",
+    "visited_at": 1763386561
   },
   {
     "name": "nvim",
     "path": "D:\\appdata\\nvim",
-    "visited_at": 1761913414
+    "visited_at": 1780484818
   },
   {
     "id": "20250701192118_6061",
@@ -38,30 +78,14 @@
     "visited_at": 1761304487
   },
   {
-    "id": "20250714133428_6015",
-    "name": "pwf inventory",
-    "path": "D:\\dev\\pwf\\pwf-inventory",
-    "visited_at": 1761146830
-  },
-  {
     "name": "hungyi.net",
     "path": "D:\\dev\\hungyi.net",
     "visited_at": 1759646989
   },
   {
-    "name": "soze.opsreport",
-    "path": "D:\\work\\code\\soze.opsreport",
-    "visited_at": 1756697037
-  },
-  {
     "name": "pwf moo-map",
     "path": "D:\\dev\\pwf\\moo-map",
     "visited_at": 1754316490
-  },
-  {
-    "name": "hearthmill",
-    "path": "D:\\dev\\hearthmill.nvim",
-    "visited_at": 1753252442
   },
   {
     "name": "arrow.nvim",
@@ -79,27 +103,27 @@
     "visited_at": 1751379096
   },
   {
-    "name": "tree-sitter-angular",
-    "path": "D:\\dev\\tree-sitter-angular"
-  },
-  {
-    "name": "advent-of-code",
-    "path": "D:\\dev\\advent-of-code"
-  },
-  {
-    "name": "genealogy",
-    "path": "D:\\work\\code\\genealogy"
+    "name": "ars",
+    "path": "D:\\work\\code\\ars"
   },
   {
     "name": "key-be-seen",
     "path": "D:\\dev\\key-be-seen"
   },
   {
+    "name": "tree-sitter-angular",
+    "path": "D:\\dev\\tree-sitter-angular"
+  },
+  {
     "name": "soze.arm",
     "path": "D:\\work\\code\\soze.arm"
   },
   {
-    "name": "ars",
-    "path": "D:\\work\\code\\ars"
+    "name": "genealogy",
+    "path": "D:\\work\\code\\genealogy"
+  },
+  {
+    "name": "advent-of-code",
+    "path": "D:\\dev\\advent-of-code"
   }
 ]

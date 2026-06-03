@@ -143,3 +143,6 @@ end, { desc = "Reset Zoom" })
 
 -- Allow pasting into terminal windows
 vim.keymap.set("t", "<C-r>", [['<C-\><C-N>"'.nr2char(getchar()).'pi']], { expr = true })
+
+-- Easier escape
+-- vim.keymap.set("i", "jl", "<esc>", { noremap = true, silent = true, desc = "Escape" })

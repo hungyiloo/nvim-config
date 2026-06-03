@@ -7,7 +7,22 @@ return {
       mode = { "n" },
       "<leader>pp",
       function()
-        require("cd-project").api.cd_project_in_tab = function(path) require("cd-project").api.cd_project(path, { cd_cmd = "tabe | tcd" }) end
+        require("cd-project").api.cd_project_in_tab = function(path)
+          -- If the project is already open in a tab, jump to it instead of opening a new one.
+          local target = path:gsub("[/\\]+$", "")
+          for _, tabpage in ipairs(vim.api.nvim_list_tabpages()) do
+            local tab_cwd = vim.fn.getcwd(-1, vim.api.nvim_tabpage_get_number(tabpage)):gsub("[/\\]+$", "")
+            if tab_cwd == target then
+              vim.api.nvim_set_current_tabpage(tabpage)
+              return
+            end
+          end
+          -- Open the tab once here, then let the plugin only change directory (tcd).
+          -- Embedding `tabe` in cd_cmd causes a stray blank tab because the plugin
+          -- executes cd_cmd twice (api.lua:115 and api.lua:131).
+          vim.cmd("tabe")
+          require("cd-project").api.cd_project(path, { cd_cmd = "tcd" })
+        end
         require("cd-project/adapter/vim-ui").cd_project_in_tab()
       end,
       noremap = true,
